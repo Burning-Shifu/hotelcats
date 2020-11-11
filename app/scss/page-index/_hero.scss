@@ -1,0 +1,43 @@
+.hero {
+  position: relative;
+  padding: 153px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-image: url(../../img/hero-overlay.svg);
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+
+  &__content {
+    margin-left: 8.5%;
+  }
+
+  &__city {
+    font-size: 14px;
+  }
+
+  &__heading {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-family: Rubik;
+    font-weight: 700;
+    font-size: 62px;
+    line-height: 73px;
+  }
+
+  &__descr {
+    margin-bottom: 40px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}

@@ -1,0 +1,14 @@
+.menu {
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    display: inline-block;
+    margin-left: 30px;
+  }
+
+  &__link {
+    color: inherit;
+  }
+}
