@@ -1,8 +1,8 @@
 .hero {
   position: relative;
-  padding: 153px 0;
+  height: 500px;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-position-x: right;
   z-index: 0;
 
   &::before {
@@ -18,6 +18,12 @@
   }
 
   &__content {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    justify-content: center;
     margin-left: 8.5%;
   }
 
@@ -35,6 +41,7 @@
   }
 
   &__descr {
+    max-width: 350px;
     margin-bottom: 40px;
     font-weight: 500;
     font-size: 20px;
