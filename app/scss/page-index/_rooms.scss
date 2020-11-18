@@ -1,8 +1,14 @@
 .rooms {
   padding-top: 130px;
+  overflow: hidden;
+
+  &__inner {
+    position: relative;
+  }
 
   &__slider {
     max-width: 1034px;
+
   }
 
   &__slide {
