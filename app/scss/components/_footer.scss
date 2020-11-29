@@ -1,0 +1,22 @@
+.footer {
+  padding: 12px 0 20px;
+
+  &__top {
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #efefef;
+  }
+
+  &__bottom {
+    padding-top: 20px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__text {
+    font-size: 12px;
+    line-height: 14px;
+    color: $lighter-grey;
+  }
+}

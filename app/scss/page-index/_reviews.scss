@@ -1,9 +1,14 @@
 .reviews {
   padding-top: 120px;
+  padding-bottom: 50px;
   overflow: hidden;
 
   &__inner {
     position: relative;
+  }
+
+  &__slider {
+    overflow: visible;
   }
 
   &__slide {

@@ -1,26 +1,26 @@
 let swiper = new Swiper('.rooms__slider', {
-  // loop: true,
+  loop: true,
   pagination: {
-    el: '.slider__pagination',
+    el: '.rooms__pagination',
     clickable: true,
   },
   navigation: {
-    nextEl: '.slider__arrow--next',
-    prevEl: '.slider__arrow--prev',
+    nextEl: '.rooms__arrow-next',
+    prevEl: '.rooms__arrow-prev',
   },
 });
 
 new Swiper('.reviews__slider', {
   slideClass: 'reviews__slide',
-  freeMode: true,
-  slidesPerView: 3,
+  // freeMode: true,
+  slidesPerView: 2,
   spaceBetween: 30,
   pagination: {
-    el: '.slider__pagination',
+    el: '.reviews__pagination',
     clickable: true,
   },
   navigation: {
-    nextEl: '.slider__arrow--next',
-    prevEl: '.slider__arrow--prev',
+    nextEl: '.reviews__arrow-next',
+    prevEl: '.reviews__arrow-prev',
   },
 });

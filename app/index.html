@@ -218,15 +218,15 @@
 
             </div>
 
-            <div class="slider__pagination swiper-pagination"></div>
+            <div class="rooms__pagination slider__pagination swiper-pagination"></div>
 
             <div class="slider__navigation d-flex">
-              <div class="slider__arrow slider__arrow--prev">
+              <div class="rooms__arrow-prev slider__arrow slider__arrow--prev">
                 <svg class="slider__arrow-svg">
                   <use href="#arrow-left"></use>
                 </svg>
               </div>
-              <div class="slider__arrow slider__arrow--next">
+              <div class="rooms__arrow-next slider__arrow slider__arrow--next">
                 <svg class="slider__arrow-svg">
                   <use href="#arrow-right"></use>
                 </svg>
@@ -276,7 +276,7 @@
                 </div>
               </blockquote>
 
-              <blockquote class="reviews__slide">
+              <blockquote class="reviews__slide"> 
                 <p class="reviews__text">
                   Первый раз пришлось оставить нашего котика в гостинице, очень переживали. Администратор Мария каждый день высылала нам фото нашего питомца, рассказывала, как он себя чувствует. И мы, и котик остались очень довольны!
                 </p>
@@ -304,8 +304,26 @@
                   <cite class="reviews__author">Павел Нечаев</cite>
                   <time class="reviews__date" datetime="">2 августа, 2019</time>
                 </div>
-              </blockquote>
+              </blockquote> 
               
+            </div>
+
+            <div class="reviews__pagination slider__pagination swiper-pagination"></div>
+
+            <div class="slider__navigation d-flex">
+              <div class="reviews__arrow-prev slider__arrow slider__arrow--prev">
+                <svg class="slider__arrow-svg">
+                  <use href="#arrow-left"></use>
+                </svg>
+              </div>
+              <div class="reviews__arrow-next slider__arrow slider__arrow--next">
+                <svg class="slider__arrow-svg">
+                  <use href="#arrow-right"></use>
+                </svg>
+              </div>          
+            </div>
+            
+          </div>
         </div>
       </div>
     </section>
@@ -369,7 +387,37 @@
 
   </main>
 
-  <footer class="footer"></footer>
+  <footer class="footer">
+    <div class="container container--small">
+      <div class="footer__top d-flex">
+        <a class="logo" href="#">
+          <img class="logo__img" src="img/logo.png" alt="Логотип сайта - рыжий кот">
+        </a>
+    
+        <nav class="menu">
+          <ul class="menu__list indent-0">
+            <li class="menu__item">
+              <a class="menu__link" href="#">Почему мы?</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Номера</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Отзывы</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Как нас найти</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer__bottom d-flex">
+        <p class="footer__text">2019 Все права защищены</p>
+        <a class="footer__text" href="#">Политика конфиденциальности</a>
+      </div>
+    </div>
+  </footer>
 
   <svg display="none" xmlns="http://www.w3.org/2000/svg">
 

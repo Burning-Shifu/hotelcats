@@ -3,7 +3,7 @@
   &__navigation {
     justify-content: flex-end;
     margin-top: 30px;
-    margin-bottom: 35px;
+    margin-bottom: 20px;
   }
 
   &__arrow {
@@ -39,5 +39,8 @@
 }
 
 .swiper-container-horizontal>.swiper-pagination-bullets {
-  bottom: 40px;
+  left: 50%;
+  bottom: 15px;
+  width: fit-content;
+  transform: translateX(-50%);
 }
