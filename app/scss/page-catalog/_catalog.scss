@@ -1,0 +1,99 @@
+.catalog {
+  --fz: 14px;
+  --lh: 17px;
+
+  padding-bottom: 140px;
+
+  // &__inner {
+  // }
+
+  &__filters {
+    max-width: 250px;
+    width: 100%;
+  }
+
+  &__filters-wrapper {
+    margin-bottom: 30px;
+  }
+
+  &__filters-title {
+    font-weight: 500;
+    margin-bottom: 17px;
+  }
+  
+  &__input-wrapper {
+    display: inline-block;
+    margin-right: 6px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__price-label {
+    font-size: 0;
+  }
+
+  &__filters-price {
+    width: 100px;
+    font-size: var(--fz);
+    line-height: var(--lh);
+    border: 1px solid #E1E1E1;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  &__check {
+    position: relative;
+    bottom: 1px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #e1e1e1;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 4px;
+      display: none;
+      width: 12px;
+      height: 8px;
+      background-image: url(../../img/deco/checkmark.svg);
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__check-input {
+    appearance: none;
+    visibility: hidden;
+    position: absolute;
+
+    &:checked + .catalog__check::after {
+      display: block;
+    }
+  }
+
+  &__label-text {
+    margin-left: 5px;
+    font-size: var(--fz);
+    line-height: var(--lh);
+    vertical-align: super;
+  }
+
+  &__filters-btn {
+    margin-bottom: 10px;
+    padding: 13px 36px 15px;
+    width: 75.5%;
+    font-size: var(--fz);
+    line-height: var(--lh);
+  }
+
+  &__filters-reset {
+    box-shadow: none;
+    border: 2px solid $yellow;
+  }
+}
