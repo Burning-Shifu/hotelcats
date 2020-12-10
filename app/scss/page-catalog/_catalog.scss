@@ -4,16 +4,16 @@
 
   padding-bottom: 140px;
 
-  // &__inner {
-  // }
+  // aside filters
 
   &__filters {
     max-width: 250px;
     width: 100%;
+    margin-right: 50px;
   }
 
   &__filters-wrapper {
-    margin-bottom: 30px;
+    margin-bottom: 31px;
   }
 
   &__filters-title {
@@ -96,4 +96,178 @@
     box-shadow: none;
     border: 2px solid $yellow;
   }
+
+  // rooms
+
+  &__main {
+    max-width: 100%;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+	&__room {
+    margin-right: 30px;
+    margin-bottom: 30px;
+    width: calc(100% / 3 - 20px);
+    height: fit-content;
+    background-color: #fff;
+    border: 1px solid #e1e1e1;
+    border-radius: 6px;
+    box-shadow: 0px 0px 25px rgba(208, 208, 208, 0.25);
+    overflow: hidden;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+
+  &__img-link {
+    display: block;
+  }
+
+  &__room-info {
+    padding: 0 16px 25px 20px;
+  }
+  
+	&__room-img {
+    width: 100%;
+    height: 185px;
+  }
+  
+	&__room-title {
+    display: inline-block;
+    margin-top: 16px;
+    margin-bottom: 12px;
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  
+	&__room-list {
+    margin-bottom: 18px;
+    list-style: none;
+  }
+  
+	&__room-item {
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  // иконки
+
+  &__equip-list {
+    margin-top: -3px;
+  }
+
+  &__equip-item {
+    position: relative;
+    display: inline-block;
+
+    &:hover {
+
+      .catalog__equip-tooltip {
+        display: block;
+      }
+    }
+
+    &:first-child {
+      margin-left: 7px;
+    }
+
+    &:nth-child(n+1) {
+
+    }
+  }
+
+  &__equip {
+    display: inline-block;
+    margin-right: 4px;
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+
+    &--empty {
+      background-image: url(../../img/svg/empty.svg);
+    }  
+
+    &--bed {
+      position: relative;
+      top: 2px;
+      background-image: url(../../img/svg/bed.svg);
+    }
+
+    &--scratch {
+      background-image: url(../../img/svg/scratching-post.svg);
+    }
+
+    &--toys {
+      background-image: url(../../img/svg/toys.svg);
+
+      & + .catalog__equip-tooltip {
+        top: -60px;
+        white-space: normal;
+      }
+    }
+
+    &--house {
+      background-image: url(../../img/svg/house.svg);
+    }
+  }
+
+  &__equip-tooltip {
+    display: none;
+    position: absolute;
+    top: -43px;
+    left: -31px;
+    padding: 7px 10px;
+    background-color: $white;
+    border: 1px solid $yellow;
+    border-radius: 4px;
+    box-shadow: 0px 4px 12px rgba(173, 152, 143, 0.18);
+    white-space: nowrap;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -9px;
+      left: 29px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 9px 9px 0 9px;
+      border-color: $yellow transparent transparent transparent;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -7px;
+      left: 30px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 8px 8px 0 8px;
+      border-color: $white transparent transparent transparent;
+    }
+  }
+
+    // end иконки
+
+  &__room-price {
+    padding-left: 5px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+  
+	&__book {
+    padding: 14px 60px 14px 30px;
+    width: 100%;
+
+    .btn__deco {
+      top: 5px;
+    }
+	}
+
 }

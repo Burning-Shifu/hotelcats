@@ -65,32 +65,32 @@
             <div class="catalog__filters-wrapper">
               <div class="catalog__filters-title">Площадь</div>
               <label class="catalog__label">
-                <input class="catalog__check-input" type="checkbox">
+                <input class="catalog__check-input" type="checkbox" checked>
                 <span class="catalog__check"></span>
                 <span class="catalog__label-text">0.63м<sup>2</sup></span>
               </label>
               <label class="catalog__label">
-                <input class="catalog__check-input" type="checkbox">
+                <input class="catalog__check-input" type="checkbox" checked>
                 <span class="catalog__check"></span>
                 <span class="catalog__label-text">0.90м<sup>2</sup></span>
               </label>
               <label class="catalog__label">
-                <input class="catalog__check-input" type="checkbox">
+                <input class="catalog__check-input" type="checkbox" checked>
                 <span class="catalog__check"></span>
                 <span class="catalog__label-text">1.13м<sup>2</sup></span>
               </label>
               <label class="catalog__label">
-                <input class="catalog__check-input" type="checkbox">
+                <input class="catalog__check-input" type="checkbox" checked>
                 <span class="catalog__check"></span>
                 <span class="catalog__label-text">1.56м<sup>2</sup></span>
               </label>
               <label class="catalog__label">
-                <input class="catalog__check-input" type="checkbox">
+                <input class="catalog__check-input" type="checkbox" checked>
                 <span class="catalog__check"></span>
                 <span class="catalog__label-text">2.56м<sup>2</sup></span>
               </label>
               <label class="catalog__label">
-                <input class="catalog__check-input" type="checkbox">
+                <input class="catalog__check-input" type="checkbox" checked>
                 <span class="catalog__check"></span>
                 <span class="catalog__label-text">2.88<sup>2</sup></span>
               </label>              
@@ -99,27 +99,27 @@
             <div class="catalog__filters-wrapper">
               <div class="catalog__filters-title">Оснащение номера</div>
               <label class="catalog__label">
-                <input class="catalog__check-input" type="checkbox">
+                <input class="catalog__check-input" type="checkbox" checked>
                 <span class="catalog__check"></span>
                 <span class="catalog__label-text">Пустой номер</span>
               </label>
               <label class="catalog__label">
-                <input class="catalog__check-input" type="checkbox">
+                <input class="catalog__check-input" type="checkbox" checked>
                 <span class="catalog__check"></span>
                 <span class="catalog__label-text">Лежак</span>
               </label>
               <label class="catalog__label">
-                <input class="catalog__check-input" type="checkbox">
+                <input class="catalog__check-input" type="checkbox" checked>
                 <span class="catalog__check"></span>
                 <span class="catalog__label-text">Когтеточка</span>
               </label>
               <label class="catalog__label">
-                <input class="catalog__check-input" type="checkbox">
+                <input class="catalog__check-input" type="checkbox" checked>
                 <span class="catalog__check"></span>
                 <span class="catalog__label-text">Игровой комплекс</span>
               </label>
               <label class="catalog__label">
-                <input class="catalog__check-input" type="checkbox">
+                <input class="catalog__check-input" type="checkbox" checked>
                 <span class="catalog__check"></span>
                 <span class="catalog__label-text">Домик</span>
               </label>
@@ -130,7 +130,228 @@
 
           </aside>
 
-          <div class="catalog__main"></div>
+          <div class="catalog__main d-flex">
+
+            <article class="catalog__room">
+              <a class="catalog__img-link" href="#">
+                <img class="catalog__room-img" src="img/rooms/cat-economy.jpg" alt="Кот на подстилке">
+              </a>
+              <div class="catalog__room-info">
+                <a class="catalog__room-title">Эконом</a>
+                <ul class="catalog__room-list indent-0">
+                  <li class="catalog__room-item">Размеры (ШхГхВ) - 90х70х180 см</li>
+                  <li class="catalog__room-item">Площадь - 0,63 м2</li>
+                  <li class="catalog__room-item catalog__equip-list">Оснащение номера
+                    <div class="catalog__equip-item">
+                      <span class="catalog__equip catalog__equip--empty"></span>
+                      <span class="catalog__equip-tooltip">Пустой номер</span>
+                    </div>
+                  </li>
+                  <li class="catalog__room-item">Цена за сутки:
+                    <span class="catalog__room-price">100₽</span>
+                  </li>
+                </ul>
+                <button class="btn catalog__book" type="button">Забронировать
+                  <span class="btn__deco d-flex">
+                    <svg class="btn__svg">
+                      <use href="#paw-small"></use>
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </article>
+
+            <article class="catalog__room">
+              <a class="catalog__img-link" href="#">
+                <img class="catalog__room-img" src="img/rooms/cat-economy-plus.jpg" alt="Кот, лежащий на одной из секций когтеточки">
+              </a>
+              <div class="catalog__room-info">
+                <a class="catalog__room-title">Эконом плюс</a>
+                <ul class="catalog__room-list indent-0">
+                  <li class="catalog__room-item">Размеры (ШхГхВ) - 90х100х180 см</li>
+                  <li class="catalog__room-item">Площадь - 0,90 м2</li>
+                  <li class="catalog__room-item catalog__equip-list">Оснащение номера
+                    <div class="catalog__equip-item">
+                      <span class="catalog__equip catalog__equip--bed"></span>
+                      <span class="catalog__equip-tooltip">Лежак</span>
+                    </div>
+                    <div class="catalog__equip-item">
+                      <span class="catalog__equip catalog__equip--scratch"></span>
+                      <span class="catalog__equip-tooltip">Когтеточка</span>
+                    </div>
+                  </li>
+                  <li class="catalog__room-item">Цена за сутки:
+                    <span class="catalog__room-price">200₽</span>
+                  </li>
+                </ul>
+                <button class="btn catalog__book" type="button">Забронировать
+                  <span class="btn__deco d-flex">
+                    <svg class="btn__svg">
+                      <use href="#paw-small"></use>
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </article>
+
+            <article class="catalog__room">
+              <a class="catalog__img-link" href="#">
+                <img class="catalog__room-img" src="img/rooms/cat-comfort.jpg" alt="Кот, лежащий на одной из секций когтеточки с игрушками">
+              </a>
+              <div class="catalog__room-info">
+                <a class="catalog__room-title">Комфорт</a>
+                <ul class="catalog__room-list indent-0">
+                  <li class="catalog__room-item">Размеры (ШхГхВ) - 100х125х180 см</li>
+                  <li class="catalog__room-item">Площадь - 1,13 м2</li>
+                  <li class="catalog__room-item catalog__equip-list">Оснащение номера
+                    <div class="catalog__equip-item">
+                      <span class="catalog__equip catalog__equip--bed"></span>
+                      <span class="catalog__equip-tooltip">Лежак</span>
+                    </div>
+                    <div class="catalog__equip-item">
+                      <span class="catalog__equip catalog__equip--scratch"></span>
+                      <span class="catalog__equip-tooltip">Когтеточка</span>
+                    </div>
+                    <div class="catalog__equip-item">
+                      <span class="catalog__equip catalog__equip--toys"></span>
+                      <span class="catalog__equip-tooltip">Игровой комплекс</span>
+                    </div>
+                  </li>
+                  <li class="catalog__room-item">Цена за сутки:
+                    <span class="catalog__room-price">250₽</span>
+                  </li>
+                </ul>
+                <button class="btn catalog__book" type="button">Забронировать
+                  <span class="btn__deco d-flex">
+                    <svg class="btn__svg">
+                      <use href="#paw-small"></use>
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </article>
+            
+            <article class="catalog__room">
+              <a class="catalog__img-link" href="#">
+                <img class="catalog__room-img" src="img/rooms/cat-suite.jpg" alt="Кот в круглой лежанке">
+              </a>
+              <div class="catalog__room-info">
+                <a class="catalog__room-title">Сьют</a>
+                <ul class="catalog__room-list indent-0">
+                  <li class="catalog__room-item">Размеры (ШхГхВ) - 125х125х180 см</li>
+                  <li class="catalog__room-item">Площадь - 1,56 м2</li>
+                  <li class="catalog__room-item catalog__equip-list">Оснащение номера
+                    <div class="catalog__equip-item">
+                      <span class="catalog__equip catalog__equip--bed"></span>
+                      <span class="catalog__equip-tooltip">Лежак</span>
+                    </div>
+                    <div class="catalog__equip-item">
+                      <span class="catalog__equip catalog__equip--scratch"></span>
+                      <span class="catalog__equip-tooltip">Когтеточка</span>
+                    </div>
+                    <div class="catalog__equip-item">
+                      <span class="catalog__equip catalog__equip--toys"></span>
+                      <span class="catalog__equip-tooltip">Игровой комплекс</span>
+                    </div>
+                  </li>
+                  <li class="catalog__room-item">Цена за сутки:
+                    <span class="catalog__room-price">350₽</span>
+                  </li>
+                </ul>
+                <button class="btn catalog__book" type="button">Забронировать
+                  <span class="btn__deco d-flex">
+                    <svg class="btn__svg">
+                      <use href="#paw-small"></use>
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </article>
+
+            <article class="catalog__room">
+              <a class="catalog__img-link" href="#">
+                <img class="catalog__room-img" src="img/rooms/cat-luxe.jpg" alt="Кот в мягкой шерстяной лежанке">
+              </a>
+              <div class="catalog__room-info">
+                <a class="catalog__room-title">Люкс</a>
+                <ul class="catalog__room-list indent-0">
+                  <li class="catalog__room-item">Размеры (ШхГхВ) - 160х160х180 см</li>
+                  <li class="catalog__room-item">Площадь - 2,56 м2</li>
+                  <li class="catalog__room-item catalog__equip-list">Оснащение номера
+                    <div class="catalog__equip-item">
+                      <span class="catalog__equip catalog__equip--bed"></span>
+                      <span class="catalog__equip-tooltip">Лежак</span>
+                    </div>
+                    <div class="catalog__equip-item">
+                      <span class="catalog__equip catalog__equip--scratch"></span>
+                      <span class="catalog__equip-tooltip">Когтеточка</span>
+                    </div>
+                    <div class="catalog__equip-item">
+                      <span class="catalog__equip catalog__equip--toys"></span>
+                      <span class="catalog__equip-tooltip">Игровой комплекс</span>
+                    </div>
+                    <div class="catalog__equip-item">
+                      <span class="catalog__equip catalog__equip--house"></span>
+                      <span class="catalog__equip-tooltip">Домик</span>
+                    </div>
+                  </li>
+                  <li class="catalog__room-item">Цена за сутки:
+                    <span class="catalog__room-price">500₽</span>
+                  </li>
+                </ul>
+                <button class="btn catalog__book" type="button">Забронировать
+                  <span class="btn__deco d-flex">
+                    <svg class="btn__svg">
+                      <use href="#paw-small"></use>
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </article>
+
+            <article class="catalog__room">
+              <a class="catalog__img-link" href="#">
+                <img class="catalog__room-img" src="img/rooms/cat-super-luxe.jpg" alt="Кот у когтеточки с игрушкой">
+              </a>
+              <div class="catalog__room-info">
+                <a class="catalog__room-title">Супер-Люкс</a>
+                <ul class="catalog__room-list indent-0">
+                  <li class="catalog__room-item">Размеры (ШхГхВ) - 180х160х180 см</li>
+                  <li class="catalog__room-item">Площадь - 2,88 м2</li>
+                  <li class="catalog__room-item catalog__equip-list">Оснащение номера
+                    <div class="catalog__equip-item">
+                      <span class="catalog__equip catalog__equip--bed"></span>
+                      <span class="catalog__equip-tooltip">Лежак</span>
+                    </div>
+                    <div class="catalog__equip-item">
+                      <span class="catalog__equip catalog__equip--scratch"></span>
+                      <span class="catalog__equip-tooltip">Когтеточка</span>
+                    </div>
+                    <div class="catalog__equip-item">
+                      <span class="catalog__equip catalog__equip--toys"></span>
+                      <span class="catalog__equip-tooltip">Игровой комплекс</span>
+                    </div>
+                    <div class="catalog__equip-item">
+                      <span class="catalog__equip catalog__equip--house"></span>
+                      <span class="catalog__equip-tooltip">Домик</span>
+                    </div>
+                  </li>
+                  <li class="catalog__room-item">Цена за сутки:
+                    <span class="catalog__room-price">600₽</span>
+                  </li>
+                </ul>
+                <button class="btn catalog__book" type="button">Забронировать
+                  <span class="btn__deco d-flex">
+                    <svg class="btn__svg">
+                      <use href="#paw-small"></use>
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </article>
+
+          </div>
+
         </div>
       </div>
     </section>
