@@ -1,0 +1,36 @@
+.single {
+
+  &__slider {
+    max-height: 400px;
+    height: 100%;
+  }
+
+
+  &__main-slider {
+    width: 500px;
+  }
+
+  &__thumbs {
+    max-width: 70px;
+    width: 100%;
+    margin-right: 30px;
+    max-height: 400px;
+    height: 100%;
+  }
+
+  &__thumbs-img {
+    width: 70px;
+    height: 112px;
+    object-fit: cover;
+    object-position: left;
+  }
+
+  &__main-img {
+    width: 500px;
+    height: 400px;
+  }
+}
+
+.swiper-slide {
+  height: auto;
+}

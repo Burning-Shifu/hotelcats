@@ -24,3 +24,37 @@ new Swiper('.reviews__slider', {
     prevEl: '.reviews__arrow-prev',
   },
 });
+
+var galleryThumbs = new Swiper('.single__thumbs', {
+  spaceBetween: 30,
+  slidesPerView: 3,
+  watchSlidesVisibility: true,
+  watchSlidesProgress: true,
+  direction: 'vertical',
+});
+
+var galleryTop = new Swiper('.single__main-slider', {
+  thumbs: {
+    swiper: galleryThumbs
+  }
+});
+
+// let sortingText = document.querySelector('.catalog__sorting-text');
+
+// function sorting () {
+//             const rbs = document.querySelectorAll('input[name="sorting"]');
+
+//             for (const rb of rbs) {
+//                 if (rb.checked) {
+//                   sortingText.innerHTML = rb.value;
+//                     break;
+//                 }
+//             }
+            
+//         }
+
+// if (document.getElementById('sorting-space').checked) {
+//   document.querySelector('.catalog__sorting-text').textContent = "По площади";
+// } else if (document.getElementById('sorting-price').checked) {
+//   document.querySelector('.catalog__sorting-text').textContent = "По цене";
+// }

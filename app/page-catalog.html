@@ -39,10 +39,26 @@
   </header>
 
   <main>
-
     <section class="catalog">
       <div class="container">
-        <div class="title">Наши номера</div>
+
+        <div class="catalog_title d-flex jc-sb">
+          <h1 class="title">Наши номера</h1>
+          <button class="btn btn--white catalog__sorting">
+            <span class="catalog__sorting-text"></span>
+          </button>
+              <div class="catalog__sorting-list">
+                <label class="catalog__sorting-label">
+                  <input class="catalog__sorting-input value1" type="radio" name="sorting" id="sorting-space" value="По площади">
+                  По площади
+                </label>
+                <label class="catalog__sorting-label">
+                  <input class="catalog__sorting-input value2" type="radio" name="sorting" id="sorting-price" value="По цене">
+                  По цене
+                </label>
+              </div>
+        </div>
+
         <div class="catalog__inner d-flex jc-sb">
           <aside class="catalog__filters">
 
@@ -137,7 +153,7 @@
                 <img class="catalog__room-img" src="img/rooms/cat-economy.jpg" alt="Кот на подстилке">
               </a>
               <div class="catalog__room-info">
-                <a class="catalog__room-title">Эконом</a>
+                <a class="catalog__room-title" href="#">Эконом</a>
                 <ul class="catalog__room-list indent-0">
                   <li class="catalog__room-item">Размеры (ШхГхВ) - 90х70х180 см</li>
                   <li class="catalog__room-item">Площадь - 0,63 м2</li>
@@ -166,7 +182,7 @@
                 <img class="catalog__room-img" src="img/rooms/cat-economy-plus.jpg" alt="Кот, лежащий на одной из секций когтеточки">
               </a>
               <div class="catalog__room-info">
-                <a class="catalog__room-title">Эконом плюс</a>
+                <a class="catalog__room-title" href="#">Эконом плюс</a>
                 <ul class="catalog__room-list indent-0">
                   <li class="catalog__room-item">Размеры (ШхГхВ) - 90х100х180 см</li>
                   <li class="catalog__room-item">Площадь - 0,90 м2</li>
@@ -199,7 +215,7 @@
                 <img class="catalog__room-img" src="img/rooms/cat-comfort.jpg" alt="Кот, лежащий на одной из секций когтеточки с игрушками">
               </a>
               <div class="catalog__room-info">
-                <a class="catalog__room-title">Комфорт</a>
+                <a class="catalog__room-title" href="#">Комфорт</a>
                 <ul class="catalog__room-list indent-0">
                   <li class="catalog__room-item">Размеры (ШхГхВ) - 100х125х180 см</li>
                   <li class="catalog__room-item">Площадь - 1,13 м2</li>
@@ -236,7 +252,7 @@
                 <img class="catalog__room-img" src="img/rooms/cat-suite.jpg" alt="Кот в круглой лежанке">
               </a>
               <div class="catalog__room-info">
-                <a class="catalog__room-title">Сьют</a>
+                <a class="catalog__room-title" href="#">Сьют</a>
                 <ul class="catalog__room-list indent-0">
                   <li class="catalog__room-item">Размеры (ШхГхВ) - 125х125х180 см</li>
                   <li class="catalog__room-item">Площадь - 1,56 м2</li>
@@ -273,7 +289,7 @@
                 <img class="catalog__room-img" src="img/rooms/cat-luxe.jpg" alt="Кот в мягкой шерстяной лежанке">
               </a>
               <div class="catalog__room-info">
-                <a class="catalog__room-title">Люкс</a>
+                <a class="catalog__room-title" href="#">Люкс</a>
                 <ul class="catalog__room-list indent-0">
                   <li class="catalog__room-item">Размеры (ШхГхВ) - 160х160х180 см</li>
                   <li class="catalog__room-item">Площадь - 2,56 м2</li>
@@ -314,7 +330,7 @@
                 <img class="catalog__room-img" src="img/rooms/cat-super-luxe.jpg" alt="Кот у когтеточки с игрушкой">
               </a>
               <div class="catalog__room-info">
-                <a class="catalog__room-title">Супер-Люкс</a>
+                <a class="catalog__room-title" href="#">Супер-Люкс</a>
                 <ul class="catalog__room-list indent-0">
                   <li class="catalog__room-item">Размеры (ШхГхВ) - 180х160х180 см</li>
                   <li class="catalog__room-item">Площадь - 2,88 м2</li>
