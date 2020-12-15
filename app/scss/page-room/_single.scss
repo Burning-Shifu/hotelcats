@@ -57,10 +57,33 @@
 
   &__content {
     padding-left: 70px;
+
+    .equip__item {
+      margin-bottom: 12px;
+    }
+
+    .equip__list {
+      margin-top: 15px;
+    }
   }
 
   &__title {
     margin-bottom: 25px;
+  }
+
+  &__descr {
+    list-style: none;
+    margin-bottom: 25px;
+  }
+
+  &__info {
+    margin-bottom: 18px;
+  }
+
+  &__price {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
   }
 }
 

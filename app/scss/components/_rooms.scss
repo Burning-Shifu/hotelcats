@@ -2,6 +2,10 @@
   padding-top: 130px;
   overflow: hidden;
 
+  &--pb {
+    padding-bottom: 130px;
+  }
+
   &__inner {
     position: relative;
   }
