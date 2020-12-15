@@ -1,15 +1,16 @@
 .single {
+  padding: 70px 0 70px;
+  overflow: hidden;
 
-  &__slider {
+  &__inner {
+    position: relative;
+  }
+
+  &__slider-wrapper {
     max-height: 400px;
     height: 100%;
   }
-
-
-  &__main-slider {
-    width: 500px;
-  }
-
+  
   &__thumbs {
     max-width: 70px;
     width: 100%;
@@ -18,16 +19,48 @@
     height: 100%;
   }
 
+  &__img-wrapper {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: #fff;
+      opacity: 0.5;
+    }
+  }
+
   &__thumbs-img {
     width: 70px;
     height: 112px;
+    border-radius: 4px;
     object-fit: cover;
     object-position: left;
   }
 
+  &__main-slider {
+    width: 500px;
+  }
+
+
   &__main-img {
     width: 500px;
     height: 400px;
+    border-radius: 8px;
+  }
+
+  // текстовая часть
+
+  &__content {
+    padding-left: 70px;
+  }
+
+  &__title {
+    margin-bottom: 25px;
   }
 }
 

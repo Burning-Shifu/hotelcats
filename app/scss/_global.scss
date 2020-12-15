@@ -137,6 +137,14 @@ svg path {
     }
   }
 
+  &--rotate-145 {
+    &::before {
+      top: -65px;
+      right: -220px;
+      transform: scale(0.69) rotate(-145deg);
+    }
+  }
+
   &--fish {
     &::before {
       top: -87px;
