@@ -54,6 +54,13 @@
               </svg>
             </span>
           </button>
+          <a class="btn btn--white" data-fancybox data-src="#bookModal" href="javascript:;">Забронировать demo
+            <span class="btn__deco d-flex">
+              <svg class="btn__svg">
+                <use href="#paw-small"></use>
+              </svg>
+            </span>
+          </a>
         </div>
 
       </div>
@@ -418,6 +425,8 @@
     </div>
   </footer>
 
+
+
   <svg display="none" xmlns="http://www.w3.org/2000/svg">
 
     <symbol id="paw-small" width="21" height="18" viewBox="0 0 21 18">
@@ -498,13 +507,47 @@
       <path d="m19.915 13.028c-.388-.49-.277-.708 0-1.146.005-.005 3.208-4.431 3.538-5.932l.002-.001c.164-.547 0-.949-.793-.949h-2.624c-.668 0-.976.345-1.141.731 0 0-1.336 3.198-3.226 5.271-.61.599-.892.791-1.225.791-.164 0-.419-.192-.419-.739v-5.105c0-.656-.187-.949-.74-.949h-4.126c-.419 0-.668.306-.668.591 0 .622.945.765 1.043 2.515v3.797c0 .832-.151.985-.486.985-.892 0-3.057-3.211-4.34-6.886-.259-.713-.512-1.001-1.185-1.001h-2.625c-.749 0-.9.345-.9.731 0 .682.892 4.073 4.148 8.553 2.17 3.058 5.226 4.715 8.006 4.715 1.671 0 1.875-.368 1.875-1.001 0-2.922-.151-3.198.686-3.198.388 0 1.056.192 2.616 1.667 1.783 1.749 2.076 2.532 3.074 2.532h2.624c.748 0 1.127-.368.909-1.094-.499-1.527-3.871-4.668-4.023-4.878z"/>
     </symbol>
       
-      
-
-
-
   </svg>
 
+  <div class="book-modal" id="bookModal">
+    <div class="title book-modal__title" data-selectable="true">Забронировать номер</div>
+    <form class="book-modal__form" id="book-form" action="" method="post">
+      <label class="book-modal__label book-modal__label--fz0">Ваше имя
+        <input class="book-modal__input" type="text" name="name" id="book-name" placeholder="Ваше имя">
+      </label>
+      <label class="book-modal__label book-modal__label--fz0">Имя Питомца
+        <input class="book-modal__input" type="text" name="pet-name" id="book-pet-name" placeholder="Имя Питомца">
+      </label>
+      <label class="book-modal__label book-modal__label--fz0">Телефон
+        <input class="book-modal__input" type="tel" name="tel" id="book-tel" placeholder="Телефон">
+      </label>
+      <label class="book-modal__label book-modal__label--fz0">E-mail
+        <input class="book-modal__input" type="email" name="email" id="book-email" placeholder="E-mail">
+      </label>
 
+      <div class="book-modal__check-in">
+        <span class="book-modal__text">Дата заезда</span>
+        <label class="book-modal__label book-modal__date-l">с
+          <input class="book-modal__input book-modal__date" type="text" name="check-in" id="book-check-in">
+        </label>
+        <label class="book-modal__label book-modal__date-l">по
+          <input class="book-modal__input book-modal__date" type="text" name="check-out" id="book-check-out">
+        </label>
+      </div>
+
+      <a class="btn book-modal__btn" id="book-submit" data-fancybox data-src="#thxModal" href="javascript:;"  data-options='{"closeExisting": true}'>Отправить заявку
+        <span class="btn__deco d-flex">
+          <svg class="btn__svg">
+            <use href="#paw-small"></use>
+          </svg>
+        </span>
+      </a>
+    </form>
+  </div>
+
+  <div class="book-modal" id="thxModal">
+    <div class="title book-modal__title" data-selectable="true">Спасибо!</div>
+  </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="js/libs.min.js"></script>

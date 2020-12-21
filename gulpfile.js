@@ -21,7 +21,9 @@ gulp.task('sass', function(){
 gulp.task('style', function(){
     return gulp.src([
         'node_modules/normalize.css/normalize.css',
-        'node_modules/swiper/swiper-bundle.css'
+        'node_modules/swiper/swiper-bundle.css',
+        'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css',
+        'node_modules/flatpickr/dist/flatpickr.min.css',
     ])
         .pipe(concat('libs.min.css'))
         .pipe(cssmin())
@@ -30,7 +32,10 @@ gulp.task('style', function(){
 
 gulp.task('script', function(){
     return gulp.src([
-        'node_modules/swiper/swiper-bundle.js'
+        'node_modules/swiper/swiper-bundle.js',
+        'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
+        'node_modules/flatpickr/dist/flatpickr.min.js',
+        'node_modules/flatpickr/dist/l10n/ru.js',
     ])
         .pipe(concat('libs.min.js'))
         .pipe(uglify())

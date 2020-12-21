@@ -1,3 +1,5 @@
+'use strict';
+
 let swiper = new Swiper('.rooms__slider', {
   loop: true,
   pagination: {
@@ -37,6 +39,20 @@ var galleryTop = new Swiper('.single__main-slider', {
   thumbs: {
     swiper: galleryThumbs
   }
+});
+
+flatpickr("#book-check-in", {
+  minDate: "today",
+  dateFormat: "d-m-y",
+  defaultDate: "today",
+  "locale": "ru"
+});
+
+flatpickr("#book-check-out", {
+  minDate: "today",
+  dateFormat: "d-m-y",
+  defaultDate: "today",
+  "locale": "ru"
 });
 
 // let sortingText = document.querySelector('.catalog__sorting-text');
