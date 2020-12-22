@@ -24,6 +24,7 @@ gulp.task('style', function(){
         'node_modules/swiper/swiper-bundle.css',
         'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css',
         'node_modules/flatpickr/dist/flatpickr.min.css',
+        'node_modules/flatpickr/dist/themes/confetti.css',
     ])
         .pipe(concat('libs.min.css'))
         .pipe(cssmin())

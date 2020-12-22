@@ -509,7 +509,7 @@
       
   </svg>
 
-  <div class="book-modal" id="bookModal">
+  <div class="book-modal deco deco--small" id="bookModal">
     <div class="title book-modal__title" data-selectable="true">Забронировать номер</div>
     <form class="book-modal__form" id="book-form" action="" method="post">
       <label class="book-modal__label book-modal__label--fz0">Ваше имя
@@ -545,8 +545,16 @@
     </form>
   </div>
 
-  <div class="book-modal" id="thxModal">
-    <div class="title book-modal__title" data-selectable="true">Спасибо!</div>
+  <div class="book-modal thx-modal" id="thxModal">
+    <div class="title book-modal__title thx-modal__title" data-selectable="true">Спасибо за заявку!</div>
+    <p class="thx-modal__text">Мы свяжемся с вами в ближайшее время</p>
+    <button data-fancybox-close class="btn book-modal__btn thx-modal__btn">Ок
+      <span class="btn__deco d-flex">
+        <svg class="btn__svg">
+          <use href="#paw-small"></use>
+        </svg>
+      </span>
+    </button>
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

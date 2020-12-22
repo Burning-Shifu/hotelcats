@@ -145,6 +145,15 @@ svg path {
     }
   }
 
+  &--small {
+    &::before {
+      top: -110px;
+      left: -133px;
+      transform: scale(0.4) rotate(150deg);
+      z-index: 0;
+    }
+  }
+
   &--fish {
     &::before {
       top: -87px;
@@ -155,4 +164,13 @@ svg path {
       transform: rotate(0deg);
     }
   }
+}
+
+// крестик закрытия модульного окна
+
+.fancybox-slide--html .fancybox-close-small {
+  right: 10px;
+  top: 6px;
+  width: 60px;
+  height: 60px;
 }
