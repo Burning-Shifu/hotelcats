@@ -176,8 +176,11 @@
   }
   
 	&__book {
-    padding: 14px 60px 14px 30px;
+    padding: 15px 60px 14px 30px;
     width: 100%;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
 
     .btn__deco {
       top: 5px;
