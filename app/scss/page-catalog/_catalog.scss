@@ -2,6 +2,7 @@
   --fz: 14px;
   --lh: 17px;
 
+  padding-top: 70px;
   padding-bottom: 140px;
 
   // aside filters
@@ -186,24 +187,106 @@
       top: 5px;
     }
   }
+
+  // кнопка сортировки
   
-  // sorting
-
   &__sorting {
-    height: fit-content;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 174px;
+    font-size: var(--fz);
+    line-height: var(--lh);
+    color: #141312;
   }
 
-  &__sorting-text {
-    display: block;
-  }
-
-  &__sorting-list {
-    // display: none;
-    // position: absolute;
-    // bottom: -50px;
+  &__sorting-wrapper {
+    position: absolute;
+    bottom: -105px;
     padding: 12px 20px;
-    background-color: #FFFFFF;
+    width: 100%;
+    max-height: 0;
+    background-color: #ffffff;
     box-shadow: 0px 2px 12px rgba(173, 152, 143, 0.18);
     border-radius: 4px;
+    overflow: hidden;
+    transition: all 0.4s;
+    opacity: 0;
+    order: 1;
+
+    &.active {
+    max-height: max-content;
+    opacity: 1;
+
+      + .catalog__selected {
+        border-radius: 4px;
+        box-shadow: 0px -8px 10px rgba(173,152,143,0.18);
+
+        &::after {
+          transform: rotate(180deg);
+        }
+      }
+    }
   }
+
+  &__sorting-item {
+    padding: 10px 0;
+  }
+
+  &__sorting-input {
+    appearance: none;
+    visibility: hidden;
+  }
+
+  &__sorting-label {
+    position: relative;
+    padding-left: 12px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0px;
+      top: 1px;
+      width: 7px;
+      height: 12px;
+      background-repeat: no-repeat;
+    }
+
+    &--up {
+
+      &::before {
+        background-image: url(../../img/deco/up-arrow-tight.svg);
+      }
+    }
+
+    &--down {
+
+      &::before {
+        background-image: url(../../img/deco/down-arrow-tight.svg);
+      }
+    }
+  }
+
+  &__selected {
+    position: relative;
+    padding: 12px 20px;
+    background: #fff;
+    box-shadow: 0px 2px 12px rgba(173, 152, 143, 0.18);
+    border-radius: 25px;
+    transition: border-radius 0.3s;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 20px;
+      top: 18px;
+      width: 14px;
+      height: 8px;
+      background-image: url(../../img/deco/down-arrow.svg);
+      background-repeat: no-repeat;
+      transition: transform 0.3s;
+    }
+  }
+
+  // end сортировка
 }

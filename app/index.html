@@ -504,27 +504,27 @@
 
   <div class="book-modal deco deco--small" id="bookModal">
     <div class="title book-modal__title" data-selectable="true">Забронировать номер</div>
-    <form class="book-modal__form" id="book-form" action="" method="post">
+    <form class="book-modal__form" id="book-form" action="" method="post" target="_blank">
       <label class="book-modal__label book-modal__label--fz0">Ваше имя
-        <input class="book-modal__input" type="text" name="name" id="book-name" placeholder="Ваше имя">
+        <input class="book-modal__input" type="text" name="name" id="book-name" placeholder="Ваше имя" required>
       </label>
       <label class="book-modal__label book-modal__label--fz0">Имя Питомца
-        <input class="book-modal__input" type="text" name="pet-name" id="book-pet-name" placeholder="Имя Питомца">
+        <input class="book-modal__input" type="text" name="pet-name" id="book-pet-name" placeholder="Имя Питомца" required>
       </label>
       <label class="book-modal__label book-modal__label--fz0">Телефон
-        <input class="book-modal__input" type="tel" name="tel" id="book-tel" placeholder="Телефон">
+        <input class="book-modal__input" type="tel" name="tel" id="book-tel" placeholder="Телефон" required>
       </label>
       <label class="book-modal__label book-modal__label--fz0">E-mail
-        <input class="book-modal__input" type="email" name="email" id="book-email" placeholder="E-mail">
+        <input class="book-modal__input" type="email" name="email" id="book-email" placeholder="E-mail" required>
       </label>
 
       <div class="book-modal__check-in">
         <span class="book-modal__text">Дата заезда</span>
         <label class="book-modal__label book-modal__date-l">с
-          <input class="book-modal__input book-modal__date" type="text" name="check-in" id="book-check-in">
+          <input class="book-modal__input book-modal__date" type="text" name="check-in" id="book-check-in" required>
         </label>
         <label class="book-modal__label book-modal__date-l">по
-          <input class="book-modal__input book-modal__date" type="text" name="check-out" id="book-check-out">
+          <input class="book-modal__input book-modal__date" type="text" name="check-out" id="book-check-out" required>
         </label>
       </div>
 

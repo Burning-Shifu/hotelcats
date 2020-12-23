@@ -43,20 +43,39 @@
       <div class="container">
 
         <div class="catalog_title d-flex jc-sb">
-          <h1 class="title">Наши номера</h1>
-          <button class="btn btn--white catalog__sorting">
-            <span class="catalog__sorting-text"></span>
-          </button>
-              <div class="catalog__sorting-list">
-                <label class="catalog__sorting-label">
-                  <input class="catalog__sorting-input value1" type="radio" name="sorting" id="sorting-space" value="По площади">
-                  По площади
-                </label>
-                <label class="catalog__sorting-label">
-                  <input class="catalog__sorting-input value2" type="radio" name="sorting" id="sorting-price" value="По цене">
-                  По цене
-                </label>
+          <h1 class="title">Наши номера</h1>        
+          
+          <div class="catalog__sorting select-box">
+
+            <div class="catalog__sorting-wrapper">
+              <div class="catalog__sorting-item">
+                <input class="catalog__sorting-input" type="radio" name="sorting" id="sorting-square-up">
+                <label class="catalog__sorting-label catalog__sorting-label--up" for="sorting-square">По площади</label>
               </div>
+
+              <div class="catalog__sorting-item">
+                <input class="catalog__sorting-input" type="radio" name="sorting" id="sorting-square-down">
+                <label class="catalog__sorting-label catalog__sorting-label--down" for="sorting-square">По площади</label>
+              </div>
+  
+              <div class="catalog__sorting-item">
+                <input class="catalog__sorting-input" type="radio" name="sorting" id="sorting-price-up">
+                <label class="catalog__sorting-label catalog__sorting-label--up" for="sorting-price">По цене</label>
+              </div>
+
+              <div class="catalog__sorting-item">
+                <input class="catalog__sorting-input" type="radio" name="sorting" id="sorting-price-down">
+                <label class="catalog__sorting-label catalog__sorting-label--down" for="sorting-price">По цене</label>
+              </div>
+            </div>
+
+            <div class="catalog__selected">Сортировка</div>
+
+          </div>
+
+
+
+
         </div>
 
         <div class="catalog__inner d-flex jc-sb">
@@ -505,27 +524,27 @@
 
   <div class="book-modal deco deco--small" id="bookModal">
     <div class="title book-modal__title" data-selectable="true">Забронировать номер</div>
-    <form class="book-modal__form" id="book-form" action="" method="post">
+    <form class="book-modal__form" id="book-form" action="" method="post" target="_blank">
       <label class="book-modal__label book-modal__label--fz0">Ваше имя
-        <input class="book-modal__input" type="text" name="name" id="book-name" placeholder="Ваше имя">
+        <input class="book-modal__input" type="text" name="name" id="book-name" placeholder="Ваше имя" required>
       </label>
       <label class="book-modal__label book-modal__label--fz0">Имя Питомца
-        <input class="book-modal__input" type="text" name="pet-name" id="book-pet-name" placeholder="Имя Питомца">
+        <input class="book-modal__input" type="text" name="pet-name" id="book-pet-name" placeholder="Имя Питомца" required>
       </label>
       <label class="book-modal__label book-modal__label--fz0">Телефон
-        <input class="book-modal__input" type="tel" name="tel" id="book-tel" placeholder="Телефон">
+        <input class="book-modal__input" type="tel" name="tel" id="book-tel" placeholder="Телефон" required>
       </label>
       <label class="book-modal__label book-modal__label--fz0">E-mail
-        <input class="book-modal__input" type="email" name="email" id="book-email" placeholder="E-mail">
+        <input class="book-modal__input" type="email" name="email" id="book-email" placeholder="E-mail" required>
       </label>
 
       <div class="book-modal__check-in">
         <span class="book-modal__text">Дата заезда</span>
         <label class="book-modal__label book-modal__date-l">с
-          <input class="book-modal__input book-modal__date" type="text" name="check-in" id="book-check-in">
+          <input class="book-modal__input book-modal__date" type="text" name="check-in" id="book-check-in" required>
         </label>
         <label class="book-modal__label book-modal__date-l">по
-          <input class="book-modal__input book-modal__date" type="text" name="check-out" id="book-check-out">
+          <input class="book-modal__input book-modal__date" type="text" name="check-out" id="book-check-out" required>
         </label>
       </div>
 
