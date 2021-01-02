@@ -8,6 +8,42 @@ html {
   box-sizing: inherit;
 }
 
+@mixin phone {
+  @media (max-width: 400px) { @content; }
+}
+
+@mixin phone-down {
+  @media (max-width: 600px) { @content; }
+}
+
+@mixin tablet-down {
+  @media (max-width: 900px) { @content; }
+}
+
+@mixin desctop-down {
+  @media (max-width: 1200px) { @content; }
+}
+
+
+
+@include desctop-down {
+
+}
+
+@include tablet-down {
+
+}
+
+@include phone-down {
+  
+}
+
+@include phone {
+ 
+}
+
+
+
 body {
   font-family: "Lato", sans-serif;
   font-size: 16px;
@@ -25,6 +61,12 @@ a {
 svg path {
 	fill:inherit;
 	stroke:inherit;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1920px;
+  width: 100%;
 }
 
 .container {
@@ -111,6 +153,16 @@ svg path {
   line-height: 43px;
   text-align: center;
 
+  @include tablet-down {
+    margin-bottom: 50px;
+  }
+
+  @include phone-down {
+    margin-bottom: 30px;
+    font-size: 28px;
+    line-height: 33px;
+  }
+
   &__link {
     color: inherit;
   }
@@ -121,19 +173,34 @@ svg path {
   &::before {
     content: "";
     position: absolute;
-    top: -105px;
-    right: -170px;
+    top: 30px;
+    right: -60px;
     width: 367px;
     height: 314px;
     background-image: url(../img/deco/paw-big.svg);
     background-repeat: no-repeat;
     transform: rotate(21deg);
     z-index: -1;
+
+    @include tablet-down {
+      width: 33.5%;
+      height: 37.5%;
+      right: 25px;
+    }
+
+    @include phone-down {
+      right: 57px;
+    }
+
+    @include phone() {
+      top: 30px;
+      right: 82px;
+    }
   }
 
   &--rotate-38 {
     &::before {
-      top: -207px;
+      top: 13px;
       transform: rotate(-38deg);
     }
   }
@@ -157,8 +224,8 @@ svg path {
 
   &--fish {
     &::before {
-      top: -87px;
-      left: -100px;
+      top: 138px;
+      left: 0;
       width: 484px;
       height: 151px;
       background-image: url(../img/deco/fish.svg);

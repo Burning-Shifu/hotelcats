@@ -14,8 +14,6 @@ let swiper = new Swiper('.rooms__slider', {
 
 new Swiper('.reviews__slider', {
   slideClass: 'reviews__slide',
-  // freeMode: true,
-  slidesPerView: 2,
   spaceBetween: 30,
   pagination: {
     el: '.reviews__pagination',
@@ -25,6 +23,17 @@ new Swiper('.reviews__slider', {
     nextEl: '.reviews__arrow-next',
     prevEl: '.reviews__arrow-prev',
   },
+
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
+    },
+
+    1200: {
+      slidesPerView: 2,
+    },
+  }
 });
 
 var galleryThumbs = new Swiper('.single__thumbs', {
@@ -55,14 +64,8 @@ flatpickr("#book-check-out", {
   "locale": "ru"
 });
 
-// Отправка формы при нажатии кнопки в модальном окне
 
-document.getElementById("book-submit").onclick = function() {
-  document.getElementById("book-form").submit();
-};
-
-// end
-
+// кнопка сортировки
 
 const selected = document.querySelector('.catalog__selected');
 const wrapper = document.querySelector('.catalog__sorting-wrapper');
@@ -79,10 +82,14 @@ options.forEach( i => {
   });
 });
 
+// end кнопка сортировки
 
 
-// if (document.getElementById('sorting-space').checked) {
-//   document.querySelector('.catalog__sorting-text').textContent = "По площади";
-// } else if (document.getElementById('sorting-price').checked) {
-//   document.querySelector('.catalog__sorting-text').textContent = "По цене";
-// }
+// Отправка формы при нажатии кнопки в модальном окне
+
+document.getElementById("book-submit").onclick = function() {
+  document.getElementById("book-form").submit();
+};
+
+// end
+

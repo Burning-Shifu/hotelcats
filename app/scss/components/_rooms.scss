@@ -1,13 +1,18 @@
 .rooms {
-  padding-top: 130px;
+  position: relative;
+  padding-top: $p-top;
   overflow: hidden;
+
+  @include tablet-down {
+    padding-top: $p-top-tablet;
+  }
+
+  @include phone-down {
+    padding-top: $p-top-mobile;
+  }
 
   &--pb {
     padding-bottom: 130px;
-  }
-
-  &__inner {
-    position: relative;
   }
 
   &__slider {
@@ -19,32 +24,44 @@
     justify-content: flex-start;
     align-items: center;
     box-sizing: border-box;
+
+    @include phone-down {
+      flex-direction: column;
+    }
   }
 
   &__wrapper-img {
     position: relative;
     left: 2px;
-    // padding-bottom: 35%;
     width: 58%;
     height: 404px;
     overflow: hidden;
+
+    @include tablet-down {
+      width: 60%;
+      height: 326px;
+    }
+
+    @include phone-down {
+      left: 0px;
+      width: 100%;
+    }
   }
 
   &__img-link {
-    // position: absolute;
-    // top: 0;
-    // left: 0;
     width: 100%;
     height: 100%;
   }
 
   &__img {
-    max-width: 100%;
-    max-height: 100%;
     object-fit: cover;
     height: 100%;
     width: 100%;
     border-radius: 10px;
+
+    @include phone-down {
+      border-radius: 8px 8px 0px 0px;
+    }
   }
 
   &__slide-content {
@@ -56,6 +73,17 @@
     border-radius: 8px;
     box-shadow: 0px 0px 25px rgba(208, 208, 208, 0.25);
     z-index: 1;
+
+    @include tablet-down {
+      padding: 40px;
+      width: 49%;
+    }
+
+    @include phone-down {
+      margin-left: 0;
+      width: 100%;
+      border-radius: 0px 0px 8px 8px;
+    }
   }
 
   &__slide-title {
@@ -64,6 +92,12 @@
     font-weight: 500;
     font-size: 22px;
     line-height: 26px;
+
+    @include tablet-down {
+      margin-bottom: 20px;
+      font-size: 20px;
+      line-height: 24px;
+    }
   }
 
   &__title-link {
@@ -80,6 +114,10 @@
     margin-bottom: 15px;
     padding-left: 20px;
 
+    @include tablet-down {
+      margin-bottom: 10px;
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -89,7 +127,17 @@
       height: 13px;
       background-color: $yellow;
       border-radius: 50%;
+
+      @include tablet-down {
+        width: 11px;
+        height: 11px;
+      }
     }
+  }
+
+  &__book {
+    width: 100%;
+    text-align: center;
   }
 }
 

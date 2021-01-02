@@ -1,10 +1,11 @@
 .reviews {
+  position: relative;
   padding-top: 120px;
   padding-bottom: 50px;
   overflow: hidden;
 
-  &__inner {
-    position: relative;
+  @include phone-down {
+    padding: 70px 0;
   }
 
   &__slider {
@@ -21,6 +22,10 @@
     background: #fff;
     box-shadow: 0px 0px 25px rgba(208, 208, 208, 0.25);
     border-radius: 8px;
+
+    @include phone-down {
+      padding: 20px 20px 20px 54px;
+    }
   }
 
   &__text {
@@ -37,6 +42,13 @@
       font-size: 72px;
       line-height: 86px;
       color: $yellow;
+
+      @include phone-down {
+        left: -31px;
+        top: -3px;
+        font-size: 54px;
+        line-height: 65px;
+      }
     }
   }
 
@@ -45,9 +57,17 @@
     font-size: 14px;
     line-height: 17px;
     color: $grey;
+
+    @include phone-down {
+      flex-direction: column;
+    }
   }
 
   &__author {
     font-style: normal;
+
+    @include phone-down {
+      margin-bottom: 7px;
+    }
   }
 }

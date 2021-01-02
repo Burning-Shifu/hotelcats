@@ -5,12 +5,7 @@
   &__inner {
     position: relative;
   }
-
-  &__slider-wrapper {
-    max-height: 400px;
-    height: 100%;
-  }
-  
+ 
   &__thumbs {
     max-width: 70px;
     width: 100%;
@@ -35,7 +30,6 @@
   }
 
   &__thumbs-img {
-    width: 70px;
     height: 112px;
     border-radius: 4px;
     object-fit: cover;
@@ -43,14 +37,17 @@
   }
 
   &__main-slider {
-    width: 500px;
+    max-width: 500px;
+    width: 100%;
   }
 
 
   &__main-img {
-    width: 500px;
-    height: 400px;
+    width: 100%;
+    max-height: 400px;
+    height: 100%;
     border-radius: 8px;
+    object-fit: cover;
   }
 
   // текстовая часть
