@@ -42,40 +42,64 @@
     <section class="catalog">
       <div class="container">
 
-        <div class="catalog_title d-flex jc-sb">
-          <h1 class="title">Наши номера</h1>        
+        <div class="catalog__title d-flex">
+          <h1 class="title">Наши номера</h1>
           
-          <div class="catalog__sorting select-box">
+          <div class="catalog__top-buttons">
+            <a class="btn catalog__top-btn catalog__filter" data-fancybox data-src="#catalogFilters" data-options='{"touch": false}' href="javascript:;">
+              <svg class="catalog__filter-svg">
+                <use href="#filter"></use>
+              </svg>
+              Фильтры
+            </a>
 
-            <div class="catalog__sorting-wrapper">
-              <div class="catalog__sorting-item">
-                <input class="catalog__sorting-input" type="radio" name="sorting" id="sorting-square-up">
-                <label class="catalog__sorting-label catalog__sorting-label--up" for="sorting-square">По площади</label>
-              </div>
-
-              <div class="catalog__sorting-item">
-                <input class="catalog__sorting-input" type="radio" name="sorting" id="sorting-square-down">
-                <label class="catalog__sorting-label catalog__sorting-label--down" for="sorting-square">По площади</label>
-              </div>
+            <div class="catalog__sorting catalog__top-btn d-flex">
+              <div class="catalog__sorting-wrapper">
+                <div class="catalog__sorting-item">
+                  <input class="catalog__sorting-input" type="radio" name="sorting" id="sorting-square-up">
+                  <label class="catalog__sorting-label" for="sorting-square">
+                    <svg class="catalog__sorting-svg">
+                      <use href="#up-arrow-tight"></use>
+                    </svg>
+                    По площади
+                  </label>
+                </div>
   
-              <div class="catalog__sorting-item">
-                <input class="catalog__sorting-input" type="radio" name="sorting" id="sorting-price-up">
-                <label class="catalog__sorting-label catalog__sorting-label--up" for="sorting-price">По цене</label>
+                <div class="catalog__sorting-item">
+                  <input class="catalog__sorting-input" type="radio" name="sorting" id="sorting-square-down">
+                  <label class="catalog__sorting-label" for="sorting-square">
+                    <svg class="catalog__sorting-svg">
+                      <use href="#down-arrow-tight"></use>
+                    </svg>
+                    По площади
+                  </label>
+                </div>
+    
+                <div class="catalog__sorting-item">
+                  <input class="catalog__sorting-input" type="radio" name="sorting" id="sorting-price-up">
+                  <label class="catalog__sorting-label" for="sorting-price">
+                    <svg class="catalog__sorting-svg">
+                      <use href="#up-arrow-tight"></use>
+                    </svg>
+                    По цене
+                  </label>
+                </div>
+  
+                <div class="catalog__sorting-item">
+                  <input class="catalog__sorting-input" type="radio" name="sorting" id="sorting-price-down">
+                  <label class="catalog__sorting-label" for="sorting-price">
+                    <svg class="catalog__sorting-svg">
+                      <use href="#down-arrow-tight"></use>
+                    </svg>
+                    По цене
+                  </label>
+                </div>
               </div>
-
-              <div class="catalog__sorting-item">
-                <input class="catalog__sorting-input" type="radio" name="sorting" id="sorting-price-down">
-                <label class="catalog__sorting-label catalog__sorting-label--down" for="sorting-price">По цене</label>
-              </div>
+              <div class="catalog__selected">Сортировка</div>
+  
             </div>
-
-            <div class="catalog__selected">Сортировка</div>
-
           </div>
-
-
-
-
+          
         </div>
 
         <div class="catalog__inner d-flex jc-sb">
@@ -86,13 +110,13 @@
               <div class="catalog__input-wrapper">
                 <span class="catalog__reset"></span>
                 <label class="catalog__price-label">Минимальная цена
-                  <input class="catalog__filters-price" type="text" placeholder="от 100">
+                  <input class="catalog__filters-price" type="text" name="min-price" placeholder="от 100">
                 </label>
               </div>
               <div class="catalog__input-wrapper">
                 <span class="catalog__reset"></span>
                 <label class="catalog__price-label">Максимальная цена
-                  <input class="catalog__filters-price" type="text" placeholder="до 600">
+                  <input class="catalog__filters-price" type="text" name="max-price" placeholder="до 600">
                 </label>
               </div>
             </div>
@@ -100,32 +124,32 @@
             <div class="catalog__filters-wrapper">
               <div class="catalog__filters-title">Площадь</div>
               <label class="catalog__label">
-                <input class="catalog__check-input" type="checkbox" checked>
+                <input class="catalog__check-input" type="checkbox" name="area-0.63" checked>
                 <span class="catalog__check"></span>
                 <span class="catalog__label-text">0.63м<sup>2</sup></span>
               </label>
               <label class="catalog__label">
-                <input class="catalog__check-input" type="checkbox" checked>
+                <input class="catalog__check-input" type="checkbox" name="area-0.90" checked>
                 <span class="catalog__check"></span>
                 <span class="catalog__label-text">0.90м<sup>2</sup></span>
               </label>
               <label class="catalog__label">
-                <input class="catalog__check-input" type="checkbox" checked>
+                <input class="catalog__check-input" type="checkbox" name="area-1.13" checked>
                 <span class="catalog__check"></span>
                 <span class="catalog__label-text">1.13м<sup>2</sup></span>
               </label>
               <label class="catalog__label">
-                <input class="catalog__check-input" type="checkbox" checked>
+                <input class="catalog__check-input" type="checkbox" name="area-1.56" checked>
                 <span class="catalog__check"></span>
                 <span class="catalog__label-text">1.56м<sup>2</sup></span>
               </label>
               <label class="catalog__label">
-                <input class="catalog__check-input" type="checkbox" checked>
+                <input class="catalog__check-input" type="checkbox" name="area-2.56" checked>
                 <span class="catalog__check"></span>
                 <span class="catalog__label-text">2.56м<sup>2</sup></span>
               </label>
               <label class="catalog__label">
-                <input class="catalog__check-input" type="checkbox" checked>
+                <input class="catalog__check-input" type="checkbox" name="area-2.88" checked>
                 <span class="catalog__check"></span>
                 <span class="catalog__label-text">2.88<sup>2</sup></span>
               </label>              
@@ -134,34 +158,34 @@
             <div class="catalog__filters-wrapper">
               <div class="catalog__filters-title">Оснащение номера</div>
               <label class="catalog__label">
-                <input class="catalog__check-input" type="checkbox" checked>
+                <input class="catalog__check-input" type="checkbox" name="equip-empty" checked>
                 <span class="catalog__check"></span>
                 <span class="catalog__label-text">Пустой номер</span>
               </label>
               <label class="catalog__label">
-                <input class="catalog__check-input" type="checkbox" checked>
+                <input class="catalog__check-input" type="checkbox" name="equip-bed" checked>
                 <span class="catalog__check"></span>
                 <span class="catalog__label-text">Лежак</span>
               </label>
               <label class="catalog__label">
-                <input class="catalog__check-input" type="checkbox" checked>
+                <input class="catalog__check-input" type="checkbox" name="equip-scratch" checked>
                 <span class="catalog__check"></span>
                 <span class="catalog__label-text">Когтеточка</span>
               </label>
               <label class="catalog__label">
-                <input class="catalog__check-input" type="checkbox" checked>
+                <input class="catalog__check-input" type="checkbox" name="equip-toys" checked>
                 <span class="catalog__check"></span>
                 <span class="catalog__label-text">Игровой комплекс</span>
               </label>
               <label class="catalog__label">
-                <input class="catalog__check-input" type="checkbox" checked>
+                <input class="catalog__check-input" type="checkbox" name="equip-house" checked>
                 <span class="catalog__check"></span>
                 <span class="catalog__label-text">Домик</span>
               </label>
             </div>
 
-            <button class="btn btn--white catalog__filters-btn catalog__filters-reset" type="button">Сбросить фильтр</button>
             <button class="btn catalog__filters-btn" type="button">Применить</button>
+            <button class="btn btn--white catalog__filters-btn catalog__filters-reset" type="button">Сбросить фильтр</button>
 
           </aside>
 
@@ -445,7 +469,7 @@
         </div>
       </div>
 
-      <div class="contacts__map" style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Санкт‑Петербург</a><a href="https://yandex.ru/maps/2/saint-petersburg/house/bolshaya_konyushennaya_ulitsa_19_8/Z0kYdQVjSEQPQFtjfXVyeXpgYQ==/?ll=30.323943%2C59.939214&utm_medium=mapframe&utm_source=maps&z=17.44" style="color:#eee;font-size:12px;position:absolute;top:14px;">Большая Конюшенная улица, 19/8 — Яндекс.Карты</a><iframe src="https://yandex.ru/map-widget/v1/-/CCUAZ8uP0D" width="800" height="580" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+      <div class="contacts__map" style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Санкт‑Петербург</a><a href="https://yandex.ru/maps/2/saint-petersburg/house/bolshaya_konyushennaya_ulitsa_19_8/Z0kYdQVjSEQPQFtjfXVyeXpgYQ==/?ll=30.323943%2C59.939214&utm_medium=mapframe&utm_source=maps&z=17.44" style="color:#eee;font-size:12px;position:absolute;top:14px;">Большая Конюшенная улица, 19/8 — Яндекс.Карты</a><iframe src="https://yandex.ru/map-widget/v1/-/CCUAZ8uP0D" width="100%" height="100%" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
     </section>
 
   </main>
@@ -453,11 +477,11 @@
   <footer class="footer">
     <div class="container container--small">
       <div class="footer__top d-flex">
-        <a class="logo" href="#">
-          <img class="logo__img" src="img/logo.png" alt="Логотип сайта - рыжий кот">
+        <a class="logo " href="#">
+          <img class="logo__img footer__logo-img" src="img/logo.png" alt="Логотип сайта - рыжий кот">
         </a>
     
-        <nav class="menu">
+        <nav class="menu footer__menu">
           <ul class="menu__list indent-0">
             <li class="menu__item">
               <a class="menu__link" href="#">Почему мы?</a>
@@ -508,6 +532,18 @@
       c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z"/>
     </symbol>
 
+    <symbol id="filter" width="12" height="15" viewBox="0 0 12 15">
+      <path d="M4.5 8.68421L0 1.57895V0H12V1.57895L7.5 8.68421V13.4211L4.5 15V8.68421Z" fill="#1A212F"/>
+    </symbol>
+
+    <symbol id="down-arrow-tight" width="7" height="12" viewBox="0 0 7 12" xmlns="http://www.w3.org/2000/svg">
+      <path d="M3.5 11L6 8.64706M3.5 11L1 8.64706M3.5 11L3.5 1" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <symbol id="up-arrow-tight" width="7" height="12" viewBox="0 0 7 12" xmlns="http://www.w3.org/2000/svg">
+      <path d="M3.5 1L1 3.35294M3.5 1L6 3.35294M3.5 1V11" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
     <symbol id="facebook" viewBox="0 0 24 24">
       <path d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z"/>
     </symbol>
@@ -521,6 +557,94 @@
     </symbol>
       
   </svg>
+
+  <!-- modals -->
+
+  <aside class="catalog__filters" id="catalogFilters">
+
+    <div class="catalog__filters-wrapper">
+      <div class="catalog__filters-title">Цена за сутки, ₽</div>
+      <div class="catalog__input-wrapper">
+        <span class="catalog__reset"></span>
+        <label class="catalog__price-label">Минимальная цена
+          <input class="catalog__filters-price" type="text" name="min-price" placeholder="от 100">
+        </label>
+      </div>
+      <div class="catalog__input-wrapper">
+        <span class="catalog__reset"></span>
+        <label class="catalog__price-label">Максимальная цена
+          <input class="catalog__filters-price" type="text" name="max-price" placeholder="до 600">
+        </label>
+      </div>
+    </div>
+
+    <div class="catalog__filters-wrapper">
+      <div class="catalog__filters-title">Площадь</div>
+      <label class="catalog__label">
+        <input class="catalog__check-input" type="checkbox" name="area-0.63" checked>
+        <span class="catalog__check"></span>
+        <span class="catalog__label-text">0.63м<sup>2</sup></span>
+      </label>
+      <label class="catalog__label">
+        <input class="catalog__check-input" type="checkbox" name="area-0.90" checked>
+        <span class="catalog__check"></span>
+        <span class="catalog__label-text">0.90м<sup>2</sup></span>
+      </label>
+      <label class="catalog__label">
+        <input class="catalog__check-input" type="checkbox" name="area-1.13" checked>
+        <span class="catalog__check"></span>
+        <span class="catalog__label-text">1.13м<sup>2</sup></span>
+      </label>
+      <label class="catalog__label">
+        <input class="catalog__check-input" type="checkbox" name="area-1.56" checked>
+        <span class="catalog__check"></span>
+        <span class="catalog__label-text">1.56м<sup>2</sup></span>
+      </label>
+      <label class="catalog__label">
+        <input class="catalog__check-input" type="checkbox" name="area-2.56" checked>
+        <span class="catalog__check"></span>
+        <span class="catalog__label-text">2.56м<sup>2</sup></span>
+      </label>
+      <label class="catalog__label">
+        <input class="catalog__check-input" type="checkbox" name="area-2.88" checked>
+        <span class="catalog__check"></span>
+        <span class="catalog__label-text">2.88<sup>2</sup></span>
+      </label>              
+    </div>
+
+    <div class="catalog__filters-wrapper">
+      <div class="catalog__filters-title">Оснащение номера</div>
+      <label class="catalog__label">
+        <input class="catalog__check-input" type="checkbox" name="equip-empty" checked>
+        <span class="catalog__check"></span>
+        <span class="catalog__label-text">Пустой номер</span>
+      </label>
+      <label class="catalog__label">
+        <input class="catalog__check-input" type="checkbox" name="equip-bed" checked>
+        <span class="catalog__check"></span>
+        <span class="catalog__label-text">Лежак</span>
+      </label>
+      <label class="catalog__label">
+        <input class="catalog__check-input" type="checkbox" name="equip-scratch" checked>
+        <span class="catalog__check"></span>
+        <span class="catalog__label-text">Когтеточка</span>
+      </label>
+      <label class="catalog__label">
+        <input class="catalog__check-input" type="checkbox" name="equip-toys" checked>
+        <span class="catalog__check"></span>
+        <span class="catalog__label-text">Игровой комплекс</span>
+      </label>
+      <label class="catalog__label">
+        <input class="catalog__check-input" type="checkbox" name="equip-house" checked>
+        <span class="catalog__check"></span>
+        <span class="catalog__label-text">Домик</span>
+      </label>
+    </div>
+
+    <button class="btn catalog__filters-btn" type="button">Применить</button>
+    <button class="btn btn--white catalog__filters-btn catalog__filters-reset" type="button">Сбросить фильтр</button>
+
+  </aside>
 
   <div class="book-modal deco deco--small" id="bookModal">
     <div class="title book-modal__title" data-selectable="true">Забронировать номер</div>
