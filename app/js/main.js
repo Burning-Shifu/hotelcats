@@ -37,11 +37,21 @@ new Swiper('.reviews__slider', {
 });
 
 var galleryThumbs = new Swiper('.single__thumbs', {
-  spaceBetween: 30,
   slidesPerView: 3,
   watchSlidesVisibility: true,
   watchSlidesProgress: true,
-  direction: 'vertical',
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      direction: 'horizontal',
+      spaceBetween: 20,
+    },
+
+    900: {
+      direction: 'vertical',
+      spaceBetween: 30,
+    },
+  }
 });
 
 var galleryTop = new Swiper('.single__main-slider', {

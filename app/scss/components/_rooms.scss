@@ -13,6 +13,14 @@
 
   &--pb {
     padding-bottom: 130px;
+
+    @include tablet-down {
+      padding-bottom: 90px;
+    }
+  
+    @include phone-down {
+      padding-bottom: 60px;
+    }
   }
 
   &__slider {
