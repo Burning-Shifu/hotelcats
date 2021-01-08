@@ -1,5 +1,17 @@
 'use strict';
 
+// меню
+
+let menuButton = document.querySelector('.header__menu-btn');
+let menu = document.querySelector('.header__block');
+
+menuButton.onclick = function () {
+  menu.classList.toggle('open');
+  menuButton.classList.toggle('open');
+};
+
+// end меню
+
 let swiper = new Swiper('.rooms__slider', {
   loop: true,
   pagination: {
@@ -64,14 +76,16 @@ flatpickr("#book-check-in", {
   minDate: "today",
   dateFormat: "d-m-y",
   defaultDate: "today",
-  "locale": "ru"
+  "locale": "ru",
+  disableMobile: "true"
 });
 
 flatpickr("#book-check-out", {
   minDate: "today",
   dateFormat: "d-m-y",
   defaultDate: "today",
-  "locale": "ru"
+  "locale": "ru",
+  disableMobile: "true"
 });
 
 

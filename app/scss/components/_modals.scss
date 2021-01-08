@@ -8,15 +8,24 @@
   box-shadow: 0px 0px 25px rgba(153, 153, 153, 0.25);
   border-radius: 10px;
 
+  @include phone-down {
+    padding: 60px 30px;
+  }
+
+  @include phone {
+    padding: 60px 15px;
+  }
+
   &__title {
     margin-bottom: 35px;
     font-size: 28px;
     line-height: 33px;
-  }
 
-  // &__form {
-  //   font-size: 0;
-  // }
+    @include phone-down {
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
 
   &__label {
     
@@ -41,14 +50,31 @@
     }
   }
 
+  &__text {
+    @include phone-down {
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+
   &__date-l {
     margin-left: 12px;
+
+    @include phone-down {
+      display: block;
+      margin-left: 0;
+      width: 100%;
+    }
   }
 
   &__date {
     display: inline-block;
     margin-left: 8px;
     width: 129px;
+
+    @include phone-down {
+      width: 85%;
+    }
   }
 
   &__btn {
@@ -70,5 +96,9 @@
 
   &__btn {
     margin-top: 50px;
+
+    @include phone-down {
+      margin-top: 20px;
+    }
   }
 }

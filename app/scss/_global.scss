@@ -91,17 +91,13 @@ svg path {
   justify-content: space-between;
 }
 
-.center {
-  justify-content: center;
-  align-items: center;
-}
-
 .indent-0 {
   margin: 0;
   padding: 0;
 }
 
 .logo {
+  z-index: 3;
 
   &__img {
 

@@ -18,22 +18,47 @@
           <img class="logo__img" src="img/logo.png" alt="Логотип сайта - рыжий кот">
         </a>
     
-        <nav class="menu">
-          <ul class="menu__list indent-0">
-            <li class="menu__item">
-              <a class="menu__link" href="#">Почему мы?</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Номера</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Отзывы</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">Как нас найти</a>
-            </li>
-          </ul>
-        </nav>
+        <div class="header__block">
+          <nav class="menu">
+            <ul class="header__menu-list menu__list indent-0">
+              <li class="menu__item">
+                <a class="menu__link" href="#">Почему мы?</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Номера</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Отзывы</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Как нас найти</a>
+              </li>
+            </ul>
+          </nav>
+
+          <address class="address">
+            <a class="address__info" href="tel:88003335599">8 (800) 333-55-99</a>
+            <a class="address__social" href="https://www.facebook.com/">
+              <svg class="address__social-svg">
+                <use href="#facebook"></use>
+              </svg>
+            </a>
+            <a class="address__social" href="https://www.instagram.com/">
+              <svg class="address__social-svg">
+                <use href="#insta"></use>
+              </svg>
+            </a>
+            <a class="address__social" href="https://www.vk.com/">
+              <svg class="address__social-svg">
+                <use href="#vk"></use>
+              </svg>
+            </a>
+          </address>
+        </div>
+
+        <button class="header__menu-btn">Меню
+          <span class="header__menu-row"></span>
+        </button>
       </div>
     </div>
   </header>
@@ -447,18 +472,18 @@
               </li>
               <li class="contacts__item">
                 <div class="contacts__item-title">Социальные сети</div>
-                <a class="contacts__social center" href="#">
-                  <svg class="contacts__social-svg">
+                <a class="address__social" href="https://www.facebook.com/">
+                  <svg class="address__social-svg">
                     <use href="#facebook"></use>
                   </svg>
                 </a>
-                <a class="contacts__social center" href="#">
-                  <svg class="contacts__social-svg">
+                <a class="address__social" href="https://www.instagram.com/">
+                  <svg class="address__social-svg">
                     <use href="#insta"></use>
                   </svg>
                 </a>
-                <a class="contacts__social center" href="#">
-                  <svg class="contacts__social-svg">
+                <a class="address__social" href="https://www.vk.com/">
+                  <svg class="address__social-svg">
                     <use href="#vk"></use>
                   </svg>
                 </a>
