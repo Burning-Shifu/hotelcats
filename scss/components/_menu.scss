@@ -1,0 +1,31 @@
+.menu {
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    display: inline-block;
+    margin-left: 30px;
+
+    @include phone-down {
+      display: block;
+      margin-left: 0;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__link {
+    color: inherit;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $orange;
+    }
+
+    &:focus {
+      outline: 1px solid $orange;
+      outline-offset: 3px;
+    }
+  }
+}

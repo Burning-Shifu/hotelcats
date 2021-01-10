@@ -1,0 +1,85 @@
+.benefits {
+  position: relative;
+  overflow: hidden;
+  padding-top: $p-top;
+
+  @include tablet-down {
+    padding-top: $p-top-tablet;
+  }
+
+  @include phone-down {
+    padding-top: $p-top-mobile;
+  }
+
+  &__inner {
+    position: relative;
+  }
+
+  &__wrapper {
+    flex-wrap: wrap;
+    margin-right: -30px;
+
+    @include desctop-down {
+      margin-right: -20px;
+    }
+  }
+
+  &__item {
+    margin-right: 30px;
+    margin-bottom: 20px;
+    padding: 30px;
+    width: calc(100% / 3 - 30px);
+    background-color: #ffffff;
+    box-shadow: 0px 0px 25px rgba(#d0d0d0, 0.25);
+    border-radius: 8px;
+
+    @include desctop-down {
+      margin-right: 20px;
+      padding: 20px;
+      width: calc(100% / 3 - 20px);
+    }
+
+    @include tablet-down {
+      width: calc(100% / 2 - 20px);
+    }
+
+    @include phone-down {
+      width: 100%;
+    }
+  }
+
+  &__item-title {
+    font-family: 'Rubik', sans-serif ;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  &__item-text {
+    margin-top: 10px;
+    margin-bottom: 0;
+    line-height: 22px;
+  }
+
+  &__pic {
+    display: flex;
+    margin-bottom: 25px;
+    justify-content: center;
+    align-items: center;
+    width: 91px;
+    height: 91px;
+    background-color: $yellow;
+    border-radius: 50%;
+
+    @include desctop-down {
+      margin-bottom: 15px;
+      width: 72px;
+      height: 72px;
+    }
+  }
+
+  &__svg {
+    fill: $white;
+  }
+}

@@ -1,0 +1,118 @@
+.hero {
+  position: relative;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-position-x: right;
+  z-index: 0;
+
+  @include desctop-down {
+    background-position-x: center;
+  }
+
+  @include tablet-down {
+    height: 868px;
+    background-position-x: 15%;
+    background-position-y: bottom;
+    background-size: cover;
+  }
+
+  @include phone-down {
+    height: 457px;
+  }
+
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-image: url(../../img/hero/hero-overlay.svg);
+    background-repeat: no-repeat;
+    z-index: -1;
+
+    @include desctop-down {
+      left: -150px;
+    }
+
+    @include tablet-down {
+      left: 0;
+      background-image: url(../../img/hero/hero-overlay-adaptive-full.svg);
+      background-position-y: 265%;
+      background-position-x: 55%;
+    }
+
+    @include phone-down {
+      background-position-y: 138%;
+    }
+
+    @include phone {
+      background-position-y: 130%;
+      background-position-x: 65%;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    justify-content: center;
+    margin-left: 8.5%;
+
+    @include tablet-down {
+      margin-left: 0;
+      margin-top: 14%;
+      right: 0;
+      left: 0;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    @include phone-down {
+      margin-top: 5%;
+    }
+
+    @include phone {
+      margin-top: 45px;
+    }
+  }
+
+  &__city {
+    font-size: 14px;
+
+    @include phone-down {
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+
+  &__heading {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-family: Rubik;
+    font-weight: 700;
+    font-size: 62px;
+    line-height: 73px;
+
+    @include phone-down {
+      font-size: 44px;
+      line-height: 52px;
+    }
+  }
+
+  &__descr {
+    max-width: 350px;
+    margin-bottom: 35px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+
+    @include phone-down {
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+}

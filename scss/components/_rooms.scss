@@ -1,0 +1,161 @@
+.rooms {
+  position: relative;
+  padding-top: $p-top;
+  overflow: hidden;
+
+  @include tablet-down {
+    padding-top: $p-top-tablet;
+  }
+
+  @include phone-down {
+    padding-top: $p-top-mobile;
+  }
+
+  &--pb {
+    padding-bottom: 130px;
+
+    @include tablet-down {
+      padding-bottom: 90px;
+    }
+  
+    @include phone-down {
+      padding-bottom: 60px;
+    }
+  }
+
+  &__slider {
+    max-width: 1034px;
+  }
+
+  &__slide {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+
+    @include phone-down {
+      flex-direction: column;
+    }
+  }
+
+  &__wrapper-img {
+    position: relative;
+    left: 2px;
+    width: 58%;
+    height: 404px;
+    overflow: hidden;
+
+    @include tablet-down {
+      width: 60%;
+      height: 326px;
+    }
+
+    @include phone-down {
+      left: 0px;
+      width: 100%;
+      height: 192px;
+    }
+  }
+
+  &__img-link {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+
+    @include phone-down {
+      border-radius: 8px 8px 0px 0px;
+    }
+  }
+
+  &__slide-content {
+    margin-left: -70px;
+    padding: 40px 25px 40px 100px;
+    height: fit-content;
+    width: 47.5%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 25px rgba(208, 208, 208, 0.25);
+    z-index: 1;
+
+    @include tablet-down {
+      padding: 35px 40px;
+      width: 49%;
+    }
+
+    @include phone-down {
+      margin-left: 0;
+      padding: 20px 25px;
+      width: 100%;
+      border-radius: 0px 0px 8px 8px;
+    }
+  }
+
+  &__slide-title {
+    margin-bottom: 25px;
+    font-family: Rubik;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+
+    @include tablet-down {
+      margin-bottom: 20px;
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  &__title-link {
+    color: inherit;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    margin-bottom: 30px;
+  }
+
+  &__list-item {
+    position: relative;
+    margin-bottom: 15px;
+    padding-left: 20px;
+
+    @include tablet-down {
+      margin-bottom: 10px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 3px;
+      width: 13px;
+      height: 13px;
+      background-color: $yellow;
+      border-radius: 50%;
+
+      @include tablet-down {
+        width: 11px;
+        height: 11px;
+      }
+    }
+  }
+
+  &__item-value {
+    white-space: nowrap;
+  }
+
+  &__book {
+    width: 100%;
+    text-align: center;
+  }
+}
