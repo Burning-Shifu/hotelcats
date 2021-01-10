@@ -64,6 +64,18 @@
     color: inherit;
   }
 
+  &__info[href] {
+    
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:focus {
+      outline: 1px solid $orange;
+      outline-offset: 3px;
+    }
+  }
+
   &__map {
     max-width: 58.4%;
     width: 100%;
@@ -105,6 +117,15 @@
     height: 22px;
     background-color: $text;
     border-radius: 50%;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: lighten($text, 30);
+    }
+
+    &:focus {
+      box-shadow: 0 0 2px 4px lighten($text, 20);
+    }
 
     @include tablet-down {
       width: 24px;

@@ -55,6 +55,10 @@
     line-height: 14px;
     color: $lighter-grey;
 
+    &:hover[href] {
+      text-decoration: underline;
+    }
+
     &:first-child {
 
       @include phone-down {

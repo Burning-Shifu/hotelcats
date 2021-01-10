@@ -91,22 +91,38 @@ flatpickr("#book-check-out", {
 
 // кнопка сортировки
 
-const sorting = document.querySelector('.catalog__sorting');
+// const sorting = document.querySelector('.catalog__sorting');
+// const selected = document.querySelector('.catalog__selected');
+// const options = document.querySelectorAll('.catalog__sorting-item');
+
+// selected.addEventListener('click', () => {
+//   sorting.classList.toggle('active');
+// });
+
+// options.forEach( i => {
+//   i.addEventListener('click', () => {
+//     selected.innerHTML = i.querySelector('.catalog__sorting-label').innerHTML;
+//     sorting.classList.remove('active');
+//   });
+// });
+
+// end кнопка сортировки
+
+
 const selected = document.querySelector('.catalog__selected');
+const wrapper = document.querySelector('.catalog__sorting-wrapper');
 const options = document.querySelectorAll('.catalog__sorting-item');
 
 selected.addEventListener('click', () => {
-  sorting.classList.toggle('active');
+  wrapper.classList.toggle('active');
 });
 
 options.forEach( i => {
   i.addEventListener('click', () => {
     selected.innerHTML = i.querySelector('.catalog__sorting-label').innerHTML;
-    sorting.classList.remove('active');
+    wrapper.classList.remove('active');
   });
 });
-
-// end кнопка сортировки
 
 
 // Отправка формы при нажатии кнопки в модальном окне

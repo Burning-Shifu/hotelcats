@@ -71,14 +71,16 @@
           <h1 class="title">Наши номера</h1>
           
           <div class="catalog__top-buttons">
-            <a class="btn catalog__top-btn catalog__filter" data-fancybox data-src="#catalogFilters" data-options='{"touch": false}' href="javascript:;">
+            <a class="catalog__top-btn catalog__filter" data-fancybox data-src="#catalogFilters" data-options='{"touch": false}' href="javascript:;">
               <svg class="catalog__filter-svg">
                 <use href="#filter"></use>
               </svg>
               Фильтры
             </a>
 
-            <div class="catalog__sorting catalog__top-btn d-flex">
+
+
+            <div class="catalog__top-btn catalog__sorting d-flex">
               <div class="catalog__sorting-wrapper">
                 <div class="catalog__sorting-item">
                   <input class="catalog__sorting-input" type="radio" name="sorting" id="sorting-square-up">
@@ -123,6 +125,7 @@
               <div class="catalog__selected">Сортировка</div>
   
             </div>
+
           </div>
           
         </div>
@@ -585,7 +588,7 @@
 
   <!-- modals -->
 
-  <aside class="catalog__filters" id="catalogFilters">
+  <aside class="filters-modal catalog__filters" id="catalogFilters">
 
     <div class="catalog__filters-wrapper">
       <div class="catalog__filters-title">Цена за сутки, ₽</div>

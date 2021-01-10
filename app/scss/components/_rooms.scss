@@ -112,6 +112,11 @@
 
   &__title-link {
     color: inherit;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $orange;
+    }
   }
 
   &__list {
@@ -154,4 +159,3 @@
     text-align: center;
   }
 }
-
