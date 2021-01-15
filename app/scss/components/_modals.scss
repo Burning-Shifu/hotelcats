@@ -44,9 +44,18 @@
     background-color: $white;
     border: 1px solid #d7d7d7;
     border-radius: 25px;
+    outline: 0;
 
     &::placeholder {
       color: $text;
+    }
+
+    &:hover {
+      background-color: #e6e6e6;
+    }
+
+    &:focus {
+      border-color: $orange;
     }
   }
 
@@ -105,4 +114,16 @@
 
 .filters-modal {
   display: none;
+}
+
+.fancybox-content {
+  padding: 45px 25px;
+  border-radius: 6px;
+}
+
+.fancybox-slide--html .fancybox-close-small {
+  right: 10px;
+  top: 6px;
+  width: 60px;
+  height: 60px;
 }
