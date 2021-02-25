@@ -77,6 +77,14 @@ svg path {
   padding: 0;
 }
 
+.show {
+  display: block !important;
+}
+
+.hide {
+  display: none; 
+}
+
 .logo {
   z-index: 3;
 
