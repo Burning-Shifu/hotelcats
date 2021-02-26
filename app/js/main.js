@@ -117,60 +117,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // };
   
   // end
-  
-  // таймер
-  
-  // const endDate = '2021-03-24';
-  
-  // function getTimeRemaining() {
-  //   const t = Date.parse(endDate) - Date.now(),
-  //         days = Math.floor(t / (1000 * 60 * 60 * 24)),
-  //         hours = Math.floor((t / (1000 * 60 * 60) % 24)),
-  //         mins = Math.floor((t / 1000 / 60) % 60),
-  //         secs = Math.floor((t / 1000) % 60);
-          
-  //   return {
-  //     'total': t,
-  //     'days': days,
-  //     'hours': hours,
-  //     'mins': mins,
-  //     'secs': secs
-  //   }
-  // }
-
-  // function getZero(num) {
-  //   if (num >= 0 && num < 10) {
-  //     return `0${num}`;
-  //   } else {
-  //     return num;
-  //   }
-  // }
-  
-  // function setTimeRemaining() {
-  //   const days = document.querySelector('#days'),
-  //         hours = document.querySelector('#hours'),
-  //         mins = document.querySelector('#minutes'),
-  //         secs = document.querySelector('#seconds'),
-  //         timeInterval = setInterval(updTimer, 1000);
-
-  //   updTimer();
-
-  //   function updTimer() {
-  //     const t = getTimeRemaining();
-
-  //     days.textContent = getZero(t.days);
-  //     hours.textContent = getZero(t.hours);
-  //     mins.textContent = getZero(t.mins);
-  //     secs.textContent = getZero(t.secs);
-
-  //     if (t.total <= 0) {
-  //       clearInterval(timeInterval);
-  //     }
-  //   }
-  // }
-  // setTimeRemaining(); 
-
-  // end таймер
 
   // модальные окна
   const btnModal = document.querySelectorAll('[data-modal]'),
@@ -179,6 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
         modalBook = document.querySelector('#bookModal'),
         modalThx = document.querySelector('#thxModal'),
         body = document.querySelector('body'),
+        form = document.querySelector('.book-modal__form'),
         scrollWidth = window.innerWidth - document.documentElement.clientWidth;
 
   function openModal(modal) {
@@ -203,7 +150,6 @@ document.addEventListener('DOMContentLoaded', () => {
     btnClose.forEach(btn => {
       btn.addEventListener('click', () => closeModal(item));
     });
-    // btnClose.addEventListener('click', () => closeModal(item));
   });
 
   modals.forEach(item => {
@@ -224,16 +170,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // submit
 
-  const form = document.querySelector('.book-modal__form');
-
   form.addEventListener('submit', (e) => {
     e.preventDefault();
 
+    form.reset();
     closeModal(modalBook);
     openModal(modalThx);
   });
   
-
-
+  // end модальные окна
 
 });

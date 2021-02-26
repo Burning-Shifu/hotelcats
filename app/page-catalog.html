@@ -78,8 +78,6 @@
               Фильтры
             </a>
 
-
-
             <div class="catalog__top-btn catalog__sorting d-flex">
               <div class="catalog__sorting-wrapper">
                 <div class="catalog__sorting-item">
@@ -238,13 +236,13 @@
                     <span class="catalog__room-price">100₽</span>
                   </li>
                 </ul>
-                <a class="btn catalog__book" data-fancybox data-src="#bookModal" data-options='{"touch": false}' href="javascript:;">Забронировать
+                <button data-modal class="btn catalog__book" type="button">Забронировать
                   <span class="btn__deco d-flex">
                     <svg class="btn__svg">
                       <use href="#paw-small"></use>
                     </svg>
                   </span>
-                </a>
+                </button>
               </div>
             </article>
 
@@ -271,13 +269,13 @@
                     <span class="catalog__room-price">200₽</span>
                   </li>
                 </ul>
-                <a class="btn catalog__book" data-fancybox data-src="#bookModal" data-options='{"touch": false}' href="javascript:;">Забронировать
+                <button data-modal class="btn catalog__book" type="button">Забронировать
                   <span class="btn__deco d-flex">
                     <svg class="btn__svg">
                       <use href="#paw-small"></use>
                     </svg>
                   </span>
-                </a>
+                </button>
               </div>
             </article>
          
@@ -308,13 +306,13 @@
                     <span class="catalog__room-price">250₽</span>
                   </li>
                 </ul>
-                <a class="btn catalog__book" data-fancybox data-src="#bookModal" data-options='{"touch": false}' href="javascript:;">Забронировать
+                <button data-modal class="btn catalog__book" type="button">Забронировать
                   <span class="btn__deco d-flex">
                     <svg class="btn__svg">
                       <use href="#paw-small"></use>
                     </svg>
                   </span>
-                </a>
+                </button>
               </div>
             </article>
             
@@ -345,13 +343,13 @@
                     <span class="catalog__room-price">350₽</span>
                   </li>
                 </ul>
-                <a class="btn catalog__book" data-fancybox data-src="#bookModal" data-options='{"touch": false}' href="javascript:;">Забронировать
+                <button data-modal class="btn catalog__book" type="button">Забронировать
                   <span class="btn__deco d-flex">
                     <svg class="btn__svg">
                       <use href="#paw-small"></use>
                     </svg>
                   </span>
-                </a>
+                </button>
               </div>
             </article>
 
@@ -386,13 +384,13 @@
                     <span class="catalog__room-price">500₽</span>
                   </li>
                 </ul>
-                <a class="btn catalog__book" data-fancybox data-src="#bookModal" data-options='{"touch": false}' href="javascript:;">Забронировать
+                <button data-modal class="btn catalog__book" type="button">Забронировать
                   <span class="btn__deco d-flex">
                     <svg class="btn__svg">
                       <use href="#paw-small"></use>
                     </svg>
                   </span>
-                </a>
+                </button>
               </div>
             </article>
 
@@ -427,13 +425,13 @@
                     <span class="catalog__room-price">600₽</span>
                   </li>
                 </ul>
-                <a class="btn catalog__book" data-fancybox data-src="#bookModal" data-options='{"touch": false}' href="javascript:;">Забронировать
+                <button data-modal class="btn catalog__book" type="button">Забронировать
                   <span class="btn__deco d-flex">
                     <svg class="btn__svg">
                       <use href="#paw-small"></use>
                     </svg>
                   </span>
-                </a>
+                </button>
               </div>
             </article>
 
@@ -704,60 +702,66 @@
 
   </aside>
 
-  <div class="modal">
-    <div class="book-modal deco deco--small" id="bookModal">
-      <div class="title book-modal__title" data-selectable="true">Забронировать номер</div>
-      <form class="book-modal__form" id="book-form" action="" method="post" target="_blank">
-        <label class="book-modal__label book-modal__label--fz0">Ваше имя
-          <input class="book-modal__input" type="text" name="name" id="book-name" placeholder="Ваше имя" required>
-        </label>
-        <label class="book-modal__label book-modal__label--fz0">Имя Питомца
-          <input class="book-modal__input" type="text" name="pet-name" id="book-pet-name" placeholder="Имя Питомца" required>
-        </label>
-        <label class="book-modal__label book-modal__label--fz0">Телефон
-          <input class="book-modal__input" type="tel" name="tel" id="book-tel" placeholder="Телефон" required>
-        </label>
-        <label class="book-modal__label book-modal__label--fz0">E-mail
-          <input class="book-modal__input" type="email" name="email" id="book-email" placeholder="E-mail" required>
-        </label>
-  
-        <div class="book-modal__check-in">
-          <span class="book-modal__text">Дата заезда</span>
-          <label class="book-modal__label book-modal__date-l">с
-            <input class="book-modal__input book-modal__date" type="text" name="check-in" id="book-check-in" required>
+  <div class="modal" id="bookModal">
+    <div class="modal__inner d-flex">
+      <div class="book-modal deco deco--small">
+        <div data-close class="modal__close">×</div>
+        <div class="title book-modal__title">Забронировать номер</div>
+        <form class="book-modal__form" id="book-form" method="post">
+          <label class="book-modal__label book-modal__label--fz0">Ваше имя
+            <input class="book-modal__input" type="text" name="name" id="book-name" placeholder="Ваше имя" required>
           </label>
-          <label class="book-modal__label book-modal__date-l">по
-            <input class="book-modal__input book-modal__date" type="text" name="check-out" id="book-check-out" required>
+          <label class="book-modal__label book-modal__label--fz0">Имя Питомца
+            <input class="book-modal__input" type="text" name="pet-name" id="book-pet-name" placeholder="Имя Питомца" required>
           </label>
-        </div>
-  
-        <a class="btn book-modal__btn" id="book-submit" data-fancybox data-src="#thxModal" href="javascript:;"  data-options='{"closeExisting": true}'>Отправить заявку
+          <label class="book-modal__label book-modal__label--fz0">Телефон
+            <input class="book-modal__input" type="tel" name="tel" id="book-tel" placeholder="Телефон" required>
+          </label>
+          <label class="book-modal__label book-modal__label--fz0">E-mail
+            <input class="book-modal__input" type="email" name="email" id="book-email" placeholder="E-mail" required>
+          </label>
+    
+          <div class="book-modal__check-in">
+            <span class="book-modal__text">Дата заезда</span>
+            <label class="book-modal__label book-modal__date-l">с
+              <input class="book-modal__input book-modal__date" type="text" name="check-in" id="book-check-in" required>
+            </label>
+            <label class="book-modal__label book-modal__date-l">по
+              <input class="book-modal__input book-modal__date" type="text" name="check-out" id="book-check-out" required>
+            </label>
+          </div>
+    
+          <button class="btn book-modal__btn" id="book-submit" type="submit">Отправить заявку
+            <span class="btn__deco d-flex">
+              <svg class="btn__svg">
+                <use href="#paw-small"></use>
+              </svg>
+            </span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="thxModal">
+    <div class="modal__inner d-flex">
+      <div class="book-modal thx-modal">
+        <div class="title book-modal__title thx-modal__title">Спасибо за заявку!</div>
+        <p class="thx-modal__text">Мы свяжемся с вами в ближайшее время</p>
+        <button data-close class="btn book-modal__btn thx-modal__btn">Ок
           <span class="btn__deco d-flex">
             <svg class="btn__svg">
               <use href="#paw-small"></use>
             </svg>
           </span>
-        </a>
-      </form>
-    </div>
-  </div>
-
-  <div class="modal">
-    <div class="book-modal thx-modal" id="thxModal">
-      <div class="title book-modal__title thx-modal__title" data-selectable="true">Спасибо за заявку!</div>
-      <p class="thx-modal__text">Мы свяжемся с вами в ближайшее время</p>
-      <button data-fancybox-close class="btn book-modal__btn thx-modal__btn">Ок
-        <span class="btn__deco d-flex">
-          <svg class="btn__svg">
-            <use href="#paw-small"></use>
-          </svg>
-        </span>
-      </button>
+        </button>
+      </div>
     </div>
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="js/libs.min.js"></script>
+  <script src="js/timer.js"></script>
   <script src="js/main.js"></script>
 
 </body>
