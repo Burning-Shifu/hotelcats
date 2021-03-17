@@ -90,43 +90,19 @@ document.addEventListener('DOMContentLoaded', () => {
     disableMobile: "true"
   });
   
-  
-  // кнопка сортировки
-  
-  // const selected = document.querySelector('.catalog__selected');
-  // const wrapper = document.querySelector('.catalog__sorting-wrapper');
-  // const options = document.querySelectorAll('.catalog__sorting-item');
-  
-  // selected.addEventListener('click', () => {
-  //   wrapper.classList.toggle('active');
-  // });
-  
-  // options.forEach( i => {
-  //   i.addEventListener('click', () => {
-  //     selected.innerHTML = i.querySelector('.catalog__sorting-label').innerHTML;
-  //     wrapper.classList.remove('active');
-  //   });
-  // });
-  
-  // end кнопка сортировки
-  
-  // Отправка формы при нажатии кнопки в модальном окне
-  
-  // document.getElementById("book-submit").onclick = function() {
-  //   document.getElementById("book-form").submit();
-  // };
-  
-  // end
-
   // модальные окна
   const btnModal = document.querySelectorAll('[data-modal]'),
         btnClose = document.querySelectorAll('[data-close]'),
         modals = document.querySelectorAll('.modal'),
         modalBook = document.querySelector('#bookModal'),
         modalThx = document.querySelector('#thxModal'),
+        modalFilter = document.querySelector('#catalogFilters'),
         body = document.querySelector('body'),
         form = document.querySelector('.book-modal__form'),
-        scrollWidth = window.innerWidth - document.documentElement.clientWidth;
+        btnFilterModal = document.querySelector('[data-filter-modal]');
+
+  let scrollWidth = window.innerWidth - document.documentElement.clientWidth;
+        
 
   function openModal(modal) {
     modal.classList.remove('hide');
@@ -138,6 +114,8 @@ document.addEventListener('DOMContentLoaded', () => {
   btnModal.forEach(item => {
     item.addEventListener('click', () => openModal(modalBook));
   });
+
+  btnFilterModal.addEventListener('click', () => openModal(modalFilter));
 
   function closeModal(modal) {
     modal.classList.remove('show');

@@ -1,6 +1,16 @@
 'use strict';
 
 document.addEventListener('DOMContentLoaded', () => {
+
+  // смена фона блока
+  const banner = document.querySelector('.banner__wrapper');
+  const windowWidth = document.documentElement.clientWidth;
+
+  if (windowWidth > 600) {
+    banner.style.backgroundImage = 'url(img/banner/banner_full.jpg)';
+  } else {
+    banner.style.backgroundImage = 'url(img/banner/banner_mobile.jpg)';
+  } 
   
   // таймер
   

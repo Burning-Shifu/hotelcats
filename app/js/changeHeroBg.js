@@ -9,9 +9,6 @@ function changeHeroBg() {
   } else if (windowWidth > 320) {
     hero.style.backgroundImage = 'url(img/hero/hero-tablet.jpg)';
   } 
-  // else {
-  //   hero.style.backgroundImage = 'url(img/hero/hero-mobile.jpg)';
-  // }
 }
 
 changeHeroBg();

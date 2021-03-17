@@ -71,7 +71,7 @@
           <h1 class="title">Наши номера</h1>
           
           <div class="catalog__top-buttons">
-            <a class="catalog__top-btn catalog__filter" data-fancybox data-src="#catalogFilters" data-options='{"touch": false}' href="javascript:;">
+            <a data-filter-modal class="catalog__top-btn catalog__filter">
               <svg class="catalog__filter-svg">
                 <use href="#filter"></use>
               </svg>
@@ -443,7 +443,7 @@
 
     <section class="banner">
       <div class="container">
-        <div class="banner__wrapper" style="background-image: url('img/banner/banner.jpg');">
+        <div class="banner__wrapper" style="background-image: url('img/banner/banner_full.jpg');">
           <div class="banner__inner">
             <p class="title banner__title">Каждый 7-й день 
               <span class="banner__text">бесплатно!</span>
@@ -616,90 +616,94 @@
 
   <!-- modals -->
 
-  <aside class="filters-modal catalog__filters" id="catalogFilters">
-
-    <div class="catalog__filters-wrapper">
-      <div class="catalog__filters-title">Цена за сутки, ₽</div>
-      <div class="catalog__input-wrapper">
-        <span class="catalog__reset"></span>
-        <label class="catalog__price-label">Минимальная цена
-          <input class="catalog__filters-price" type="text" name="min-price" placeholder="от 100">
-        </label>
+  <aside class="modal" id="catalogFilters">
+    <div class="modal__inner d-flex">
+      <div class="catalog__filters filters-modal">
+        <div data-close class="modal__close">×</div>
+        <div class="catalog__filters-wrapper">
+          <div class="catalog__filters-title">Цена за сутки, ₽</div>
+          <div class="catalog__input-wrapper">
+            <span class="catalog__reset"></span>
+            <label class="catalog__price-label">Минимальная цена
+              <input class="catalog__filters-price" type="text" name="min-price" placeholder="от 100">
+            </label>
+          </div>
+          <div class="catalog__input-wrapper">
+            <span class="catalog__reset"></span>
+            <label class="catalog__price-label">Максимальная цена
+              <input class="catalog__filters-price" type="text" name="max-price" placeholder="до 600">
+            </label>
+          </div>
+        </div>
+    
+        <div class="catalog__filters-wrapper">
+          <div class="catalog__filters-title">Площадь</div>
+          <label class="catalog__label">
+            <input class="catalog__check-input" type="checkbox" name="area-0.63" checked>
+            <span class="catalog__check"></span>
+            <span class="catalog__label-text">0.63м<sup>2</sup></span>
+          </label>
+          <label class="catalog__label">
+            <input class="catalog__check-input" type="checkbox" name="area-0.90" checked>
+            <span class="catalog__check"></span>
+            <span class="catalog__label-text">0.90м<sup>2</sup></span>
+          </label>
+          <label class="catalog__label">
+            <input class="catalog__check-input" type="checkbox" name="area-1.13" checked>
+            <span class="catalog__check"></span>
+            <span class="catalog__label-text">1.13м<sup>2</sup></span>
+          </label>
+          <label class="catalog__label">
+            <input class="catalog__check-input" type="checkbox" name="area-1.56" checked>
+            <span class="catalog__check"></span>
+            <span class="catalog__label-text">1.56м<sup>2</sup></span>
+          </label>
+          <label class="catalog__label">
+            <input class="catalog__check-input" type="checkbox" name="area-2.56" checked>
+            <span class="catalog__check"></span>
+            <span class="catalog__label-text">2.56м<sup>2</sup></span>
+          </label>
+          <label class="catalog__label">
+            <input class="catalog__check-input" type="checkbox" name="area-2.88" checked>
+            <span class="catalog__check"></span>
+            <span class="catalog__label-text">2.88<sup>2</sup></span>
+          </label>              
+        </div>
+    
+        <div class="catalog__filters-wrapper">
+          <div class="catalog__filters-title">Оснащение номера</div>
+          <label class="catalog__label">
+            <input class="catalog__check-input" type="checkbox" name="equip-empty" checked>
+            <span class="catalog__check"></span>
+            <span class="catalog__label-text">Пустой номер</span>
+          </label>
+          <label class="catalog__label">
+            <input class="catalog__check-input" type="checkbox" name="equip-bed" checked>
+            <span class="catalog__check"></span>
+            <span class="catalog__label-text">Лежак</span>
+          </label>
+          <label class="catalog__label">
+            <input class="catalog__check-input" type="checkbox" name="equip-scratch" checked>
+            <span class="catalog__check"></span>
+            <span class="catalog__label-text">Когтеточка</span>
+          </label>
+          <label class="catalog__label">
+            <input class="catalog__check-input" type="checkbox" name="equip-toys" checked>
+            <span class="catalog__check"></span>
+            <span class="catalog__label-text">Игровой комплекс</span>
+          </label>
+          <label class="catalog__label">
+            <input class="catalog__check-input" type="checkbox" name="equip-house" checked>
+            <span class="catalog__check"></span>
+            <span class="catalog__label-text">Домик</span>
+          </label>
+        </div>
+    
+        <button class="btn catalog__filters-btn" type="button">Применить</button>
+        <button class="btn btn--white catalog__filters-btn catalog__filters-reset" type="button">Сбросить фильтр</button>
+  
       </div>
-      <div class="catalog__input-wrapper">
-        <span class="catalog__reset"></span>
-        <label class="catalog__price-label">Максимальная цена
-          <input class="catalog__filters-price" type="text" name="max-price" placeholder="до 600">
-        </label>
-      </div>
     </div>
-
-    <div class="catalog__filters-wrapper">
-      <div class="catalog__filters-title">Площадь</div>
-      <label class="catalog__label">
-        <input class="catalog__check-input" type="checkbox" name="area-0.63" checked>
-        <span class="catalog__check"></span>
-        <span class="catalog__label-text">0.63м<sup>2</sup></span>
-      </label>
-      <label class="catalog__label">
-        <input class="catalog__check-input" type="checkbox" name="area-0.90" checked>
-        <span class="catalog__check"></span>
-        <span class="catalog__label-text">0.90м<sup>2</sup></span>
-      </label>
-      <label class="catalog__label">
-        <input class="catalog__check-input" type="checkbox" name="area-1.13" checked>
-        <span class="catalog__check"></span>
-        <span class="catalog__label-text">1.13м<sup>2</sup></span>
-      </label>
-      <label class="catalog__label">
-        <input class="catalog__check-input" type="checkbox" name="area-1.56" checked>
-        <span class="catalog__check"></span>
-        <span class="catalog__label-text">1.56м<sup>2</sup></span>
-      </label>
-      <label class="catalog__label">
-        <input class="catalog__check-input" type="checkbox" name="area-2.56" checked>
-        <span class="catalog__check"></span>
-        <span class="catalog__label-text">2.56м<sup>2</sup></span>
-      </label>
-      <label class="catalog__label">
-        <input class="catalog__check-input" type="checkbox" name="area-2.88" checked>
-        <span class="catalog__check"></span>
-        <span class="catalog__label-text">2.88<sup>2</sup></span>
-      </label>              
-    </div>
-
-    <div class="catalog__filters-wrapper">
-      <div class="catalog__filters-title">Оснащение номера</div>
-      <label class="catalog__label">
-        <input class="catalog__check-input" type="checkbox" name="equip-empty" checked>
-        <span class="catalog__check"></span>
-        <span class="catalog__label-text">Пустой номер</span>
-      </label>
-      <label class="catalog__label">
-        <input class="catalog__check-input" type="checkbox" name="equip-bed" checked>
-        <span class="catalog__check"></span>
-        <span class="catalog__label-text">Лежак</span>
-      </label>
-      <label class="catalog__label">
-        <input class="catalog__check-input" type="checkbox" name="equip-scratch" checked>
-        <span class="catalog__check"></span>
-        <span class="catalog__label-text">Когтеточка</span>
-      </label>
-      <label class="catalog__label">
-        <input class="catalog__check-input" type="checkbox" name="equip-toys" checked>
-        <span class="catalog__check"></span>
-        <span class="catalog__label-text">Игровой комплекс</span>
-      </label>
-      <label class="catalog__label">
-        <input class="catalog__check-input" type="checkbox" name="equip-house" checked>
-        <span class="catalog__check"></span>
-        <span class="catalog__label-text">Домик</span>
-      </label>
-    </div>
-
-    <button class="btn catalog__filters-btn" type="button">Применить</button>
-    <button class="btn btn--white catalog__filters-btn catalog__filters-reset" type="button">Сбросить фильтр</button>
-
   </aside>
 
   <div class="modal" id="bookModal">
@@ -761,6 +765,7 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="js/libs.min.js"></script>
+  <script src="js/sortingBtn.js"></script>
   <script src="js/timer.js"></script>
   <script src="js/main.js"></script>
 
