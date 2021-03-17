@@ -96,9 +96,13 @@ document.addEventListener('DOMContentLoaded', () => {
         modals = document.querySelectorAll('.modal'),
         modalBook = document.querySelector('#bookModal'),
         modalThx = document.querySelector('#thxModal'),
+        modalFilter = document.querySelector('#catalogFilters'),
         body = document.querySelector('body'),
         form = document.querySelector('.book-modal__form'),
-        scrollWidth = window.innerWidth - document.documentElement.clientWidth;
+        btnFilterModal = document.querySelector('[data-filter-modal]');
+
+  let scrollWidth = window.innerWidth - document.documentElement.clientWidth;
+        
 
   function openModal(modal) {
     modal.classList.remove('hide');
@@ -110,6 +114,8 @@ document.addEventListener('DOMContentLoaded', () => {
   btnModal.forEach(item => {
     item.addEventListener('click', () => openModal(modalBook));
   });
+
+  btnFilterModal.addEventListener('click', () => openModal(modalFilter));
 
   function closeModal(modal) {
     modal.classList.remove('show');
