@@ -114,8 +114,10 @@ document.addEventListener('DOMContentLoaded', () => {
   btnModal.forEach(item => {
     item.addEventListener('click', () => openModal(modalBook));
   });
-
-  btnFilterModal.addEventListener('click', () => openModal(modalFilter));
+  
+  try {
+    btnFilterModal.addEventListener('click', () => openModal(modalFilter));
+  } catch {}
 
   function closeModal(modal) {
     modal.classList.remove('show');
